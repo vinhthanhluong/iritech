@@ -7,22 +7,13 @@ export default function TabModule() {
         const panes = $$('.tab-content-box');
 
         if (tabs) {
-            const tabActive = $('.tab-title.active');
-            const line = $('.tab-link .tab-line');
 
-            if (line) {
-                line.style.left = tabActive.offsetLeft + 'px';
-                line.style.width = tabActive.offsetWidth + 'px';
-            }
 
             tabs.forEach((tab, index) => {
                 const pane = panes[index];
                 tab.onclick = function () {
                     $('.tab-title.active').classList.remove('active');
                     $('.tab-content-box.active').classList.remove('active');
-
-                    line.style.left = this.offsetLeft + 'px';
-                    line.style.width = this.offsetWidth + "px";
 
                     this.classList.add('active');
                     pane.classList.add('active');
@@ -33,11 +24,11 @@ export default function TabModule() {
 
     //class
     if ($('.c-tab')) {
-        $(".c-tab__nav ul li").click(function () {
-            var tab_id = $(this).attr("data-tab");
+        $(".tab-tt").click(function () {
+            var tab_id = $(this).attr("data-tabs");
 
-            $(".c-tab__nav ul li").removeClass("active");
-            $(".c-tab__content").removeClass("active");
+            $(".tab-tt").removeClass("active");
+            $(".tab-con").removeClass("active");
 
             $(this).addClass("active");
             $("." + tab_id).addClass("active");

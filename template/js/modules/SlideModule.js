@@ -61,6 +61,23 @@ export default function SlideModule(){
         const pagination = el.querySelector('.swiper-pagination');
         const prevBtn = el.querySelector('.swiper-button-prev');
         const nextBtn = el.querySelector('.swiper-button-next');
+
+        //not slide
+        const notslide = el.querySelector('.notslide');
+        if (notslide) {
+            var notSlide = false;
+        } else {
+            var notSlide = true;
+        }
+
+        //not slide
+        const dynamic = el.querySelector('.dynamic');
+        if (dynamic) {
+            var notSlide = true;
+        } else {
+            var notSlide = false;
+        }
+
         try {
             new Swiper(slider, {
                 speed: 1200,
@@ -69,13 +86,17 @@ export default function SlideModule(){
                 observer: true,
                 observeParents: true,
                 observeSlideChildren: true,
-                autoplay: {
-                    delay: 4000,
-                },
+
+                allowTouchMove: notSlide,
+
+                // autoplay: {
+                //     delay: 4000,
+                // },
 
                 pagination: {
                     el: pagination,
                     clickable: true,
+                    dynamicBullets: dynamic,
                 },
 
                 navigation: {

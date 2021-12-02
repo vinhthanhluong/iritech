@@ -9,6 +9,7 @@
     <link rel="shortcut icon" type="image/png" href="./img/favicon/fav.png" />
     <!-- css -->
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/backdoor.css">
 
 
 
@@ -17,40 +18,33 @@
 <body>
     <div class="wrapper" style="height: 3000px;">
         <div id="page-loading">
-            <img src="img/logo-header.png" alt="logo-header.png" />
+            <img src="img/logo-header.svg" alt="logo-header.svg" />
         </div>
         <header class="header">
-            <div class="header-top">
-                <div class="container">
-                    <div class="header-top-inner">
-
-                    </div>
-                </div>
-            </div>
             <div class="header-bottom">
                 <div class="container">
                     <div class="header-bottom-inner">
                         <div class="header-logo">
                             <a href="home.html">
-                                <img src="./img/logo-header.png" alt="">
+                                <img src="./img/logo-header.svg" alt="logo-header.svg">
                             </a>
                         </div>
                         <div class="header-menu">
                             <div class="header-menu-inner">
                                 <div class="logo-mobile">
                                     <a href="home.html">
-                                        <img src="./img/logo-header.png" alt="logo-header.png">
+                                        <img src="./img/logo-header.svg" alt="logo-header.svg">
                                     </a>
                                 </div>
                                 <ul class="header-list">
                                     <li class="current-menu-item">
-                                        <a href="#">Job</a>
+                                        <a href="#">Home</a>
                                     </li>
                                     <li>
-                                        <a href="#">Hire</a>
+                                        <a href="#">About</a>
                                     </li>
                                     <li class="dropdown">
-                                        <a href="#">Resource</a>
+                                        <a href="#">Product</a>
                                         <ul class="sub-menu">
                                             <li>
                                                 <a href="#">test sub menu 1</a>
@@ -95,10 +89,10 @@
                                         </ul>
                                     </li>
                                     <li>
-                                        <a href="#">Blog</a>
+                                        <a href="#">Business</a>
                                     </li>
                                     <li class="dropdown">
-                                        <a href="#">About us</a>
+                                        <a href="#">New & Event</a>
                                         <ul class="sub-menu">
                                             <li>
                                                 <a href="#">test sub menu</a>
@@ -118,7 +112,10 @@
                                         </ul>
                                     </li>
                                     <li>
-                                        <a href="#">Contact us</a>
+                                        <a href="#">Support</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Contact</a>
                                     </li>
                                 </ul>
                                 <div class="header-menu-socail">
@@ -135,363 +132,407 @@
                             </div>
                             <div class="overplay"></div>
                         </div>
-                        <div class="header-search">
-                            <!-- <form action="#" class="search-form">
-                                <input type="text" class="f-control" placeholder="Tìm kiếm sản phẩm">
-                                <button class="f-submit" type="submit">
-                                    <i class="fa fa-search" aria-hidden="true"></i>
-                                </button>
-                            </form> -->
-                            <div class="search-desktop">
-                                <div class="search-title">
-                                    <i class="fa fa-search" aria-hidden="true"></i>
-                                </div>
-                                <form action="#" class="search-form">
-                                    <input type="text" class="f-control" placeholder="Tìm kiếm sản phẩm">
-                                    <button class="f-submit" type="submit">
-                                        <i class="fa fa-search" aria-hidden="true"></i>
-                                    </button>
-                                </form>
-                            </div>
-                            <div class="header-search-icon">
-                                <i class="fa fa-search" aria-hidden="true"></i>
-                            </div>
-                        </div>
-                        <div class="header-lang">
-                            <div class="box-lang item-menu ">
-                                <select class="vodiapicker">
-                                    <option value="VN" class="test" data-thumbnail="img/VN.svg">VN
-                                    </option>
-                                    <option value="EN" data-thumbnail="img/VN.svg">EN
-                                    </option>
-                                </select>
 
-                                <div class="lang-select">
-                                    <button class="btn-select" value=""></button>
-                                    <div class="lang-content">
-                                        <ul id="a"></ul>
-                                    </div>
+                        <div class="header-act">
+                            <div class="header-search">
+                                <div class="header-search-icon">
+                                    <img src="./img/svg/icon-search.svg" alt="icon-search.svg">
                                 </div>
                             </div>
-                        </div>
-                        <div class="header-cart">
-                            <!-- cart-popup-big -->
-                            <!-- <div class="cart-btn">
-                                <p>Bag</p>
-                                <div class="qty-cart">1</div>
-                            </div> -->
-                            <!-- cart-popup-small -->
-                            <div class="cart-btn">
-                                <img src="./img/icon-cart.png" alt="icon-cart.png">
+                            <div class="hamburger-btn">
+                                <div class="bar"></div>
                             </div>
-                            <div class="cart-content">
-                                <ul class="cart-list">
-                                    <li class="cart-item">
-                                        <div class="cart-close">
-                                            <i class="fa fa-times-circle" aria-hidden="true"></i>
-                                        </div>
-                                        <div class="cart-img">
-                                            <a href="#">
-                                                <img src="./img/cart1.png" alt="cart1.png">
-                                            </a>
-                                        </div>
-                                        <div class="cart-info">
-                                            <h3 class="cart-title tt-16 title t-uppercase">
-                                                <a href="#">
-                                                    CRÊPE PRINTED
-                                                </a>
-                                            </h3>
-                                            <p class="cart-price">
-                                                100,000đ
-                                            </p>
-                                        </div>
-                                    </li>
-                                    <li class="cart-item">
-                                        <div class="cart-close">
-                                            <i class="fa fa-times-circle" aria-hidden="true"></i>
-                                        </div>
-                                        <div class="cart-img">
-                                            <a href="#">
-                                                <img src="./img/cart1.png" alt="cart1.png">
-                                            </a>
-                                        </div>
-                                        <div class="cart-info">
-                                            <h3 class="cart-title tt-16 title t-uppercase">
-                                                CRÊPE PRINTED
-                                            </h3>
-                                            <p class="cart-price">
-                                                100,000đ
-                                            </p>
-                                        </div>
-                                    </li>
-                                    <li class="cart-item">
-                                        <div class="cart-close">
-                                            <i class="fa fa-times-circle" aria-hidden="true"></i>
-                                        </div>
-                                        <div class="cart-img">
-                                            <a href="#">
-                                                <img src="./img/cart1.png" alt="cart1.png">
-                                            </a>
-                                        </div>
-                                        <div class="cart-info">
-                                            <h3 class="cart-title tt-16 title t-uppercase">
-                                                CRÊPE PRINTED
-                                            </h3>
-                                            <p class="cart-price">
-                                                100,000đ
-                                            </p>
-                                        </div>
-                                    </li>
-                                </ul>
-                                <div class="cart-total">
-                                    <p class="total-t">Tổng tiền</p>
-                                    <p class="total-n tt-18">
-                                        300,000đ
-                                    </p>
-                                </div>
-
-                                <div class="cart-pay">
-                                    <a href="#" class="btn btn-black btn-link title f-bold">Thanh toán</a>
-                                    <a href="#" class="btn btn-white btn-link title f-bold">Xem giỏ hàng</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="hamburger-btn">
-                            <div class="bar"></div>
                         </div>
                     </div>
                 </div>
             </div>
         </header>
         <main class="main">
-            <div class="container">
-                <div class="test-main" style="height: 500px; background: sandybrown;"></div>
+            <div class="banners sec-80">
+                <div class="banner-wrapper">
+                    <div class="swiper-custom">
+                        <div class="swiper dynamic">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="banner-inner">
+                                        <div class="container">
+                                            <div class="columns">
+                                                <div class="column txt">
+                                                    <div class="banner-box">
+                                                        <h3 class="title t-capitalize f-semi tt-36 ">
+                                                            IriTech’s Best <br>
+                                                            Line product
+                                                        </h3>
+                                                        <p class="desc tt-16">
+                                                            Lorem Ipsum is simply dummy text of the printing and
+                                                            typesetting industry.
+                                                            Lorem Ipsum has
+                                                        </p>
+                                                        <a href="#" class="view-more btn">
+                                                            View more
+                                                        </a>
+                                                    </div>
+                                                </div>
 
-                <nav class='pagination'>
-                    <ul class='page-numbers'>
-                        <li>
-                            <span aria-current='page' class='page-numbers current'>1</span>
-                        </li>
-                        <li><a class='page-numbers' href='#'>2</a></li>
-                        <li><a class='page-numbers' href='#'>...</a></li>
-                        <li><a class='page-numbers' href='#'>4</a></li>
-                        <li><a class='page-numbers' href='#'>10</a></li>
-                    </ul>
-                </nav>
+                                                <div class="column ig">
+                                                    <div class="banner-ig">
+                                                        <p class="tt">
+                                                            IrI
+                                                        </p>
+                                                        <div class="tt-big">
+                                                            <p>s</p>
+                                                            <img src="./img/img-hinhgido.png" alt="img-hinhgido.png"
+                                                                class="banner-img">
+                                                        </div>
+                                                        <p class="tt">
+                                                            HIELd
+                                                        </p>
 
-                <nav class='pagination pagi-two'>
-                    <ul class='page-numbers'>
-                        <li>
-                            <a href="#" class="page-arrow">
-                                <i class="fa fa-angle-left" aria-hidden="true"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <span aria-current='page' class='page-numbers current'>1</span>
-                        </li>
-                        <li><a class='page-numbers' href='#'>02</a></li>
-                        <li><a class='page-numbers' href='#'>03</a></li>
-                        <li><a class='page-numbers' href='#'>04</a></li>
-                        <li>
-                            <a href="#" class="page-arrow ">
-                                <i class="fa fa-angle-right" aria-hidden="true"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-
-                <div class="popup-box">
-                    <a href="#popup-form" class="popup-title">Popup test</a>
-                    <div class="mfp-hide white-popup-block sg-content" id="popup-form">
-                        <h1>Popup test test</h1>
-                        <img src="./img/pro2.png" alt="pro2.png">
-                    </div>
-                </div>
-
-                <div class="tab tab-lines tab-mobi">
-                    <div class="tab-tt">
-                        <div class="tab-link-mobi">
-                            <p class="tt-18 f-bold">Danh mục </p>
-                        </div>
-                        <div class="tab-link">
-                            <div class="tab-title active">
-                                <p>test 1</p>
-                            </div>
-                            <div class="tab-title">
-                                <p>test 2</p>
-                            </div>
-                            <div class="tab-title">
-                                <p>test 3</p>
-                            </div>
-                            <div class="tab-line"></div>
-                        </div>
-                    </div>
-
-                    <div class="tab-content">
-                        <div class="tab-content-box active">
-                            <h1>content test 1</h1>
-                        </div>
-                        <div class="tab-content-box">
-                            <h1>content test 2</h1>
-                        </div>
-                        <div class="tab-content-box">
-                            <h1>content test 3</h1>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="countup-box" id="countup">
-                    <div class="counter" data-count='15000'>
-                        <p>0%</p>
-
-                    </div>
-                    <div class="counter" data-count='1000'>
-                        <p>0</p>
-                    </div>
-                </div>
-
-                <div class="countup">
-                    <span class="js-counter" data-counter="5000"></span>
-                </div>
-
-                <div class="breadcrumb">
-                    <div class="container">
-                        <ul class="breadcrumb-menu">
-                            <li class="breadcrumb-list">
-                                <a href="home.html">Trang chủ</a>
-                            </li>
-                            <li class="breadcrumb-list current">
-                                <a href="#">Tin tức</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-
-
-                <div class="count-down" data-end-time="05/30/2021">
-                    <div class="day"></div>
-                    <div class="hours"></div>
-                    <div class="minutes"></div>
-                    <div class="seconds"></div>
-                </div>
-
-                <div class="box-light-dark">
-                    <label class="switch">
-                        <input type="checkbox" class="switch-state">
-                        <span class="switch-toggle"></span>
-                    </label>
-                </div>
-
-                <div class="swiper-demo">
-                    <div class="swiper">
-                        <!-- Additional required wrapper -->
-                        <div class="swiper-wrapper">
-                            <!-- Slides -->
-                            <div class="swiper-slide">Slide 1</div>
-                            <div class="swiper-slide">Slide 2</div>
-                            <div class="swiper-slide">Slide 3</div>
-
-                        </div>
-                        <!-- If we need pagination -->
-                        <div class="swiper-pagination"></div>
-
-                        <!-- If we need navigation buttons -->
-                        <div class="swiper-button-prev"></div>
-                        <div class="swiper-button-next"></div>
-
-
-                    </div>
-                </div>
-                <div class="asd wow animate__rotateIn"> qweqwe</div>
-
-
-                <div class="box-star-line">
-                    <div class="star">
-                        <span class="empty-stars">
-                            <i class="fa fa-star-o"></i>
-                            <i class="fa fa-star-o"></i>
-                            <i class="fa fa-star-o"></i>
-                            <i class="fa fa-star-o"></i>
-                            <i class="fa fa-star-o"></i>
-                        </span>
-                        <span class="filled-stars" style="width: 40%">
-                            <i class="star fa fa-star"></i>
-                            <i class="star fa fa-star"></i>
-                            <i class="star fa fa-star"></i>
-                            <i class="star fa fa-star"></i>
-                            <i class="star fa fa-star"></i>
-                        </span>
-                    </div>
-                    <div class="process">
-                        <div style="width: 40%"></div>
-                    </div>
-                </div>
-
-                <div class="diagram">
-                    <div class="diagram-wrap" data-aos="fade-up">
-                        <div class="lv-1 diagram-st">
-                            <p>hội đồng quản trị</p>
-                        </div>
-                        <div class="lv-2 diagram-st">
-                            <p>ban tổng giám đốc</p>
-                        </div>
-                        <div class="lv-3-wrap">
-                            <div class="lv-3 diagram-st">
-                                <p>ban tcns & Hành chính</p>
-                            </div>
-                            <div class="lv-3 lv-4-wrap-mobile diagram-st">
-                                <p>ban kinh doanh</p>
-                                <div class="lv-4-mobile">
-                                    <div class="lv-4 diagram-st">
-                                        <p>phòng R & D</p>
-                                    </div>
-                                    <div class="lv-4 diagram-st">
-                                        <p>phòng thủ tục & CSKH</p>
-                                    </div>
-                                    <div class="lv-4 diagram-st">
-                                        <p>phòng Kinh doanh</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="lv-3 diagram-st">
-                                <p>ban đấu thầu</p>
-                            </div>
-                            <div class="lv-3 diagram-st">
-                                <p>ban marketing & truyền thông</p>
-                            </div>
-                            <div class="lv-3 diagram-st">
-                                <p>ban tài chính</p>
-                            </div>
-                            <div class="lv-3 diagram-st">
-                                <p>ban kế toán</p>
-                            </div>
-                        </div>
-                        <div class="lv-4-wrap">
-                            <div class="left">
-                                <div>
-                                    <div class="lv-4 diagram-st">
-                                        <p>phòng R & D</p>
-                                    </div>
-                                    <div class="lv-4 diagram-st">
-                                        <p>phòng thủ tục & CSKH</p>
-                                    </div>
-                                    <div class="lv-4 diagram-st">
-                                        <p>phòng Kinh doanh</p>
+                                <div class="swiper-slide">
+                                    <div class="banner-inner">
+                                        <div class="container">
+                                            <div class="columns">
+                                                <div class="column txt">
+                                                    <div class="banner-box">
+                                                        <h3 class="title t-capitalize f-semi tt-36 ">
+                                                            IriTech’s Best <br>
+                                                            Line product
+                                                        </h3>
+                                                        <p class="desc tt-16">
+                                                            Lorem Ipsum is simply dummy text of the printing and
+                                                            typesetting industry.
+                                                            Lorem Ipsum has
+                                                        </p>
+                                                        <a href="#" class="view-more btn">
+                                                            View more
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <div class="column ig">
+                                                    <div class="banner-ig">
+                                                        <p class="tt">
+                                                            IrI
+                                                        </p>
+                                                        <div class="tt-big">
+                                                            <p>s</p>
+                                                            <img src="./img/img-hinhgido.png" alt="img-hinhgido.png"
+                                                                class="banner-img">
+                                                        </div>
+                                                        <p class="tt">
+                                                            HIELd
+                                                        </p>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="right">
-                                <div class="lv-4 diagram-st">
-                                    <p>các công ty Thành viên</p>
+                                <div class="swiper-slide">
+                                    <div class="banner-inner">
+                                        <div class="container">
+                                            <div class="columns">
+                                                <div class="column txt">
+                                                    <div class="banner-box">
+                                                        <h3 class="title t-capitalize f-semi tt-36 ">
+                                                            IriTech’s Best <br>
+                                                            Line product
+                                                        </h3>
+                                                        <p class="desc tt-16">
+                                                            Lorem Ipsum is simply dummy text of the printing and
+                                                            typesetting industry.
+                                                            Lorem Ipsum has
+                                                        </p>
+                                                        <a href="#" class="view-more btn">
+                                                            View more
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <div class="column ig">
+                                                    <div class="banner-ig">
+                                                        <p class="tt">
+                                                            IrI
+                                                        </p>
+                                                        <div class="tt-big">
+                                                            <p>s</p>
+                                                            <img src="./img/img-hinhgido.png" alt="img-hinhgido.png"
+                                                                class="banner-img">
+                                                        </div>
+                                                        <p class="tt">
+                                                            HIELd
+                                                        </p>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
+
                             </div>
+                            <div class="swiper-pagination"></div>
                         </div>
                     </div>
-
                 </div>
-
             </div>
+
+            <section class="our-value sec-80 --pt-0">
+                <div class="container">
+                    <div class="value-wrapper">
+                        <div class="columns">
+                            <div class="column tt">
+                                <h3 class="value-title tt-36 f-semi t-capitalize">
+                                    Our Value
+                                </h3>
+                            </div>
+                            <div class="column txt">
+                                <div class="value-inner">
+                                    <div class="columns">
+                                        <div class="column">
+                                            <div class="value-box">
+                                                <p class="title tt-18 f-semi">
+                                                    Mission
+                                                </p>
+                                                <p class="desc tt-16">
+                                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas
+                                                    porttitor
+                                                    congue massa. Lorem ipsum dolor sit amet, consectetuer adipiscing
+                                                    elit.
+                                                    Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar
+                                                    ultricies, purus lectus malesuada libero, sit amet commodo magna
+                                                    eros quis
+                                                    urna lorem ipsum.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="column">
+                                            <div class="value-box">
+                                                <p class="title tt-18 f-semi">
+                                                    Vision
+                                                </p>
+                                                <p class="desc tt-16">
+                                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas
+                                                    porttitor
+                                                    congue massa. Lorem ipsum dolor sit amet, consectetuer adipiscing
+                                                    elit.
+                                                    Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar
+                                                    ultricies, purus lectus malesuada libero, sit amet commodo magna
+                                                    eros quis
+                                                    urna lorem ipsum.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </section>
+
+            <section class="portfolio sec-80 --pt-0">
+                <div class="container">
+                    <div class="port-wrapper c-tab">
+                        <div class="port-head">
+                            <h3 class="port-title tt-36 f-semi t-capitalize">
+                                Product <br>
+                                Portfolio
+                            </h3>
+                            <div class="tab-head">
+                                <p class="tab-tt active" data-tabs="tab-1">
+                                    Hardware
+                                </p>
+                                <p class="tab-tt" data-tabs="tab-2">
+                                    Software
+                                </p>
+                                <p class="tab-tt" data-tabs="tab-3">
+                                    Solution
+                                </p>
+                            </div>
+                        </div>
+                        <div class="port-content">
+                            <div class="tab-con tab-1 active">
+                                <div class="port-box">
+                                    <div class="img col">
+                                        <img src="./img/img-hdad-1.png" alt="img-hdad-1.png">
+                                    </div>
+                                    <div class="content col">
+                                        <p class="title tt-20 f-semi">
+                                            Cost-effective and <br>
+                                            exceptional performance
+                                        </p>
+                                        <p class="desc tt-16">
+                                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor
+                                            congue massa. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                                            Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar
+                                            ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis
+                                            urna lorem ipsum.
+                                        </p>
+                                        <a href="#" class="view-more btn">
+                                            View more
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-con tab-2">
+                                <div class="port-box">
+                                    <div class="img col">
+                                        <img src="./img/img-hdad-1.png" alt="img-hdad-1.png">
+                                    </div>
+                                    <div class="content col">
+                                        <p class="title tt-20 f-semi">
+                                            Cost-effective and <br>
+                                            exceptional performance
+                                        </p>
+                                        <p class="desc tt-16">
+                                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor
+                                            congue massa. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                                            Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar
+                                            ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis
+                                            urna lorem ipsum.
+                                        </p>
+                                        <a href="#" class="view-more btn">
+                                            View more
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-con tab-3">
+                                <div class="port-box">
+                                    <div class="img col">
+                                        <img src="./img/img-hdad-1.png" alt="img-hdad-1.png">
+                                    </div>
+                                    <div class="content col">
+                                        <p class="title tt-20 f-semi">
+                                            Cost-effective and <br>
+                                            exceptional performance
+                                        </p>
+                                        <p class="desc tt-16">
+                                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor
+                                            congue massa. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                                            Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar
+                                            ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis
+                                            urna lorem ipsum.
+                                        </p>
+                                        <a href="#" class="view-more btn">
+                                            View more
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="case-studies">
+                <div class="container">
+                    <div class="case-wrapper">
+                        <div class="columns">
+                            <div class="column tx">
+                                <div class="case-tt">
+                                    <h3 class="title tt-36 f-semi t-capitalize ">
+                                        Case Studies
+                                    </h3>
+                                    <a href="#" class="view-more btn">
+                                        View more
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="column txt">
+                                <p class="desc tt-16">
+                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue
+                                    massa. Lorem ipsum dolor sit a met, consectetuer adipiscing elit. Maecenas porttitor
+                                    congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada
+                                    libero, sit amet commodo magna eros quis urna lorem ipsum.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="news-event sec-80">
+                <div class="container">
+                    <div class="news-wrapper">
+                        <h3 class="news-title tt-36 f-semi t-capitalize">
+                            News & Events
+                        </h3>
+                        <div class="columns">
+                            <div class="column txt">
+                                <div class="box">
+                                    <p class="desc tt-16">
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                        Lorem Ipsum has Lorem ipsum dolor sit amet, consectet
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="column slide">
+                                <div class="swiper-custom">
+                                    <div class="swiper">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <div class="news-inner">
+                                                    <div class="img img-w-100">
+                                                        <img src="./img/img-news.png" alt="img-news.png">
+                                                    </div>
+                                                    <div class="content">
+                                                        <a class="tt tt-16 f-semi" title="Lorem ipsum dolor sit amet">
+                                                            Lorem ipsum dolor sit amet
+                                                        </a>
+                                                        <p class="date tt-12 f-italic">
+                                                            01, May, 2021
+                                                        </p>
+                                                        <p class="desc tt-16">
+                                                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                                                            Maecenas porttitor congue massa. Lorem ipsum dolor sit amet,
+                                                            Lorem ipsum dolor sit
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="news-inner">
+                                                    <div class="img img-w-100">
+                                                        <img src="./img/img-news.png" alt="img-news.png">
+                                                    </div>
+                                                    <div class="content">
+                                                        <a href="#" class="tt tt-16 f-semi" title="Lorem ipsum dolor sit amet">
+                                                            Lorem ipsum dolor sit amet
+                                                        </a>
+                                                        <p class="date tt-12 f-italic">
+                                                            01, May, 2021
+                                                        </p>
+                                                        <p class="desc tt-16">
+                                                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                                                            Maecenas porttitor congue massa. Lorem ipsum dolor sit amet,
+                                                            Lorem ipsum dolor sit
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="swiper-pagination"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
 
 
         </main>

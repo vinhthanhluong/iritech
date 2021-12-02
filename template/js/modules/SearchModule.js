@@ -33,22 +33,22 @@ export default function SearchModule() {
     });
 
     
-    if ($('.search-desktop')) {
+    // if ($('.search-desktop')) {
 
-        const $search = $('.search-desktop');
+    //     const $search = $('.search-desktop');
 
-        $(document).mouseup(function (e) { 
-            if (!$search.is(e.target) // nếu click vàp mục tiêu k phải là vùng chứa
-                && $search.has(e.target).length === 0)// và cũng k phải là con của vùng chứa
-                { 
-                $search.removeClass('active');
-            }
-        });
+    //     $(document).mouseup(function (e) { 
+    //         if (!$search.is(e.target) // nếu click vàp mục tiêu k phải là vùng chứa
+    //             && $search.has(e.target).length === 0)// và cũng k phải là con của vùng chứa
+    //             { 
+    //             $search.removeClass('active');
+    //         }
+    //     });
 
-        $('.search-title').on('click', function () {
-            $search.toggleClass('active');
-        });
-    }
+    //     $('.search-title').on('click', function () {
+    //         $search.toggleClass('active');
+    //     });
+    // }
 
 
 

@@ -18,9 +18,10 @@
 }
 .search-desktop{
     position: relative;
-    @include max-media($bk-768){
-        display: none;
-    }
+    display: none;
+    // @include max-media($bk-768){
+    //     display: none;
+    // }
     .search-title{
         color: rgba($color: $b-cl, $alpha: 0.4);
         font-size: 16px;
