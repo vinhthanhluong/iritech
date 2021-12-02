@@ -63,19 +63,19 @@ export default function SlideModule(){
         const nextBtn = el.querySelector('.swiper-button-next');
 
         //not slide
-        const notslide = el.querySelector('.notslide');
-        if (notslide) {
+        const touchMove = el.querySelector('.notslide');
+        if (touchMove) {
             var notSlide = false;
         } else {
             var notSlide = true;
         }
 
-        //not slide
-        const dynamic = el.querySelector('.dynamic');
-        if (dynamic) {
-            var notSlide = true;
+        //pagi dynamic
+        const pagiDynamic = el.querySelector('.dynamic');
+        if (pagiDynamic) {
+            var dynamic = true;
         } else {
-            var notSlide = false;
+            var dynamic = false;
         }
 
         try {
@@ -86,6 +86,7 @@ export default function SlideModule(){
                 observer: true,
                 observeParents: true,
                 observeSlideChildren: true,
+                loop: true,
 
                 allowTouchMove: notSlide,
 
@@ -103,7 +104,6 @@ export default function SlideModule(){
                     nextEl: nextBtn,
                     prevEl: prevBtn,
                 },
-                loop: true,
             });
         } catch (err) {
             console.log(err);

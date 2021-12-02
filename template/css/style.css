@@ -1042,19 +1042,10 @@ sup {
 }
 
 .footer {
-  background-color: #fff;
   margin-top: auto;
+  padding: 55px 0;
+  border-top: 1px solid #C4C4C4;
 }
-.footer .logo {
-  min-width: 170px;
-  margin: auto;
-}
-.footer .test {
-  width: 100%;
-  height: 500px;
-  background-color: wheat;
-}
-
 .main-title-wrap {
   display: flex;
   justify-content: space-between;
@@ -2966,6 +2957,9 @@ html .mfp-wrap {
     display: block;
   }
 }
+.our-value {
+  overflow: hidden;
+}
 .our-value .column.tt {
   width: calc(100% / 12 * 4 - 30px);
 }
@@ -3000,6 +2994,9 @@ html .mfp-wrap {
   line-height: 1.5;
 }
 
+.portfolio {
+  overflow: hidden;
+}
 .portfolio .port-head {
   display: flex;
   align-items: flex-end;
@@ -3089,6 +3086,7 @@ html .mfp-wrap {
   padding: 111px 0;
   background-color: #000000;
   color: #fff;
+  overflow: hidden;
 }
 .case-studies .columns {
   justify-content: space-between;
@@ -3121,6 +3119,9 @@ html .mfp-wrap {
   line-height: 1.5;
 }
 
+.news-event {
+  overflow: hidden;
+}
 .news-event .columns {
   justify-content: space-between;
 }
@@ -3130,22 +3131,37 @@ html .mfp-wrap {
 .news-event .column.slide {
   width: calc(100% / 12 * 8);
 }
+.news-event .box {
+  padding-top: 20px;
+}
 .news-event .desc {
   line-height: 1.5;
 }
-.news-event .swiper-wrapper {
+.news-event .news-inner:hover .img img {
+  transform: scale(1.1);
+}
+.news-event .news-inner:hover .tt {
+  color: #AC0000;
+}
+.news-event .swiper-custom {
+  overflow: hidden;
+}
+.news-event .swiper {
+  padding: 20px 0 40px;
   margin: 0 -15px;
 }
 .news-event .swiper-slide {
-  width: calc(100% / 12 * 6);
+  width: 50%;
   padding: 0 15px;
 }
 .news-event .img {
   box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.25);
   border-radius: 20px;
+  overflow: hidden;
 }
 .news-event .img img {
   border-radius: 20px;
+  transition: all 0.3s ease;
 }
 .news-event .content {
   padding-top: 30px;
@@ -3164,9 +3180,6 @@ html .mfp-wrap {
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
-}
-.news-event .tt:hover {
-  color: #AC0000;
 }
 .news-event .date {
   margin-bottom: 5px;
