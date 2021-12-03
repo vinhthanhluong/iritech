@@ -1,35 +1,48 @@
 .our-value {
     overflow: hidden;
+    .columns{
+        justify-content: space-between;
+    }
     .column {
         &.tt {
-            width: calc(100% / 12 * 4 - 30px);
+            width: calc(100% / 12 * 3 - 30px);
+            @include max-media($bk-d-1200){
+                width: 100%;
+            }
         }
 
         &.txt {
-            width: calc(100% / 12 * 8 - 30px);
+            width: calc(100% / 12 * 8 + 30px);
+            position: relative;
+            @include min-media($bk-1200){
+                padding-left: 30px;
+            }
+            @include max-media($bk-d-1200){
+                width: 100%;
+            }
+           
+            &::before {
+                content: '';
+                width: 1px;
+                height: calc(100% - 60px);
+                background-color: $b-cl;
+                position: absolute;
+                top: 15px;
+                left: 0;
+    
+                @include max-media($bk-d-1200) {
+                    display: none;
+                }
+            }
         }
     }
 
     .value-inner {
+       
         .column {
             width: 50%;
-
-            &:first-child {
-                position: relative;
-
-                &::before {
-                    content: '';
-                    width: 1px;
-                    height: calc(100% - 60px);
-                    background-color: $b-cl;
-                    position: absolute;
-                    top: 15px;
-                    left: 0;
-
-                    @include max-media($bk-d-992) {
-                        top: 7.5px;
-                    }
-                }
+            @include max-media($bk-576){
+                width: 100%;
             }
         }
     }
@@ -152,7 +165,6 @@
     background-color: $b-cl;
     color: $w-cl;
     overflow: hidden;
-
     .columns {
         justify-content: space-between;
     }

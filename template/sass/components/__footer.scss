@@ -2,6 +2,9 @@
     margin-top: auto;
     padding: 55px 0;
     border-top: 1px solid #C4C4C4;
+    @include max-media($bk-d-1200){
+        padding: 40px 0;
+    }
     .logo{
         img{
             width: auto;
@@ -17,28 +20,60 @@
     .column{
         &.ig{
             width: calc(100% / 12 * 2);
+            @include max-media($bk-d-1600){
+                width: calc(100% / 12 * 3);
+            }
+            @include max-media($bk-d-992){
+                width: 100%;
+            }
         }
 
         &.txt{
             width: calc(100% / 12 * 6);
+            @include max-media($bk-d-1600){
+                width: calc(100%/ 12 * 8);
+            }
+            @include max-media($bk-d-992){
+                width: 100%;
+                margin-top: 5px
+            }
         }
     }
 
     .ft-inner{
         display: flex;
+        flex-wrap: wrap;
         margin: -15px;
+        @include max-media($bk-d-1200){
+            margin: -7.5px;
+        }
     }
 
     .ft-box{
-        width: calc(100% - 400px);
+        width: calc(100% - 350px);
         padding: 15px;
+        @include max-media($bk-d-1200){
+            padding: 7.5px;
+        }
+        @include max-media($bk-576){
+            width: 100% !important;
+        }
         &.ft-wm{
            width: 200px;
+        }
+        &.ft-wim{
+            width: 150px;
         }
     }
 
     .title{
         margin-bottom: 20px;
+        @include max-media($bk-d-1200){
+            margin-bottom: 15px;
+        }
+        @include max-media($bk-576){
+            margin-bottom: 10px;
+        }
     }
 
     .ft-list{
@@ -88,6 +123,9 @@
         display: block;
         margin-top: 21px;
         transition: all .3s ease;
+        @include max-media($bk-d-1200){
+            margin-top: 15px;
+        }
         &:hover{
             color: $main-cl;
             text-decoration: underline;
@@ -101,6 +139,9 @@
         margin-top: 21px;
         padding: 0;
         text-align: left;
+        @include max-media($bk-d-1200){
+            margin-top: 15px;
+        }
     }
 
    

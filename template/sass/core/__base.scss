@@ -96,7 +96,7 @@ li {
     flex-wrap: wrap;
     margin: (-$padding);
 
-    @include max-media($bk-d-992) {
+    @include max-media($bk-d-1200) {
         margin: (-$padding) / 2;
     }
 }
@@ -104,7 +104,7 @@ li {
 .column {
     padding: $padding;
 
-    @include max-media($bk-d-992) {
+    @include max-media($bk-d-1200) {
         padding: $padding / 2;
     }
 }
