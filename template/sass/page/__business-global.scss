@@ -1,0 +1,111 @@
+.global-business{
+    
+    .txt-wrapper{
+        background-color: $b-cl;
+        color: $w-cl;
+        padding: 155px 0;
+
+        .column{
+            width: 50%;
+        }
+
+        .labeL{
+            margin-bottom: 2px;
+        }
+
+        .title{
+            margin-bottom: 30px;
+            display: inline-block;
+        }
+
+        .arrow{
+            width: 30px;
+            height: 30px;
+            border-radius: 100%;
+            background-color: $main-cl;
+            @include flex-mid;
+            display: inline-flex;
+            margin-left: 10px;
+            img{
+                filter: brightness(0 )invert(1);
+            }
+        }
+
+        .desc{
+            line-height: 1.5;
+        }
+
+        .img{
+            position: absolute;
+            top: -25%;
+            right: 0;
+
+        }
+    }
+
+
+    .box-wrap{
+        padding-top: 85px;
+        .gl-text{
+            max-width: 660px;
+            position: relative;
+            padding-left: 29px;
+            line-height: 1.5;
+            margin-bottom: 40px;
+            margin-left: calc(100%  / 12);
+            &::before{
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+                background-color: $main-cl;
+                width: 1px;
+                height: calc(100% - 30px);
+            }
+        }
+
+        .mona-content{
+            columns: 2;
+            column-gap: 30px;
+            line-height: 1.5;
+            p{
+                margin: 0;
+            }
+        }
+    }   
+}
+
+.global-pst{
+    .columns{
+        justify-content: space-between;
+    }
+
+    .column{
+        &.say{
+            width: calc(100% / 12 * 5);
+        }
+
+        &.txt{
+            width: calc(100% / 12 * 6);
+        }
+    }
+
+    .global-inner{
+        max-width: 420px;
+        margin-left: auto;
+    }
+
+    .ig-icon-l{
+        transform: translateX(-100%);
+    }
+    .ml-a{
+        margin-left: auto;
+    }
+
+    .desc{
+        line-height: 1.5;
+    }
+
+    
+}

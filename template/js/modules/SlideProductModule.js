@@ -12,7 +12,7 @@ export default function SlideProductModule() {
                     speed: 1000,
                     loop: true,
                     spaceBetween: 10,
-                    slidesPerView: 4,
+                    slidesPerView: 'auto',
                     freeMode: true,
                     watchSlidesVisibility: true,
                     watchSlidesProgress: true,
@@ -33,7 +33,7 @@ export default function SlideProductModule() {
                 const thumbbig = new Swiper('#thumbs-big', {
                     speed: 1000,
                     loop: true,
-                    slidesPerView: 1,
+                    slidesPerView: 'auto',
                     spaceBetween: 10,
                     thumbs: {
                         swiper: thumbsmall,

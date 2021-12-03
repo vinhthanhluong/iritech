@@ -3,7 +3,104 @@
     padding: 55px 0;
     border-top: 1px solid #C4C4C4;
     .logo{
+        img{
+            width: auto;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
 
+    .columns{
+        justify-content: space-between  ;
+    }
+
+    .column{
+        &.ig{
+            width: calc(100% / 12 * 2);
+        }
+
+        &.txt{
+            width: calc(100% / 12 * 6);
+        }
+    }
+
+    .ft-inner{
+        display: flex;
+        margin: -15px;
+    }
+
+    .ft-box{
+        width: calc(100% - 400px);
+        padding: 15px;
+        &.ft-wm{
+           width: 200px;
+        }
+    }
+
+    .title{
+        margin-bottom: 20px;
+    }
+
+    .ft-list{
+        .ft-item{
+            &:not(:first-child){
+                margin-top: 10px;
+            }
+        }
+
+       
+
+        .ft-link{
+            transition: all .3s ease;
+            &:hover{
+                color: $main-cl;
+            }
+        }
+
+    }
+
+    .social{
+        display: flex;
+        align-items: center;
+    }
+
+    .social-item{
+        border-radius: 100%;
+        width: 30px;
+        height: 30px;
+        border: 1px solid $b-cl;
+        color: $b-cl;
+        @include flex-mid;
+        transition: all .3s ease;
+        font-size: 15px;
+        &:hover{
+            border-color: $main-cl;
+            color: $main-cl;
+            transform: translateY(-5px);
+        }
+        
+        &:not(:first-child){
+            margin-left: 10px;
+        }
+    }
+
+    .tt-login{
+        display: block;
+        margin-top: 21px;
+        transition: all .3s ease;
+        &:hover{
+            color: $main-cl;
+            text-decoration: underline;
+        }
+    }
+
+
+    .copy-right{
+        background-color: transparent;
+        color: $b-cl;
+        margin-top: 21px;
+        padding: 0;
+        text-align: left;
     }
 
    

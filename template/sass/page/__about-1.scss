@@ -1,0 +1,140 @@
+.overview{
+    overflow: hidden;
+    position: relative;
+
+    .columns{
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .column{
+        &.tx{
+            width: calc(100% /12 * 3);
+        }   
+
+        &.txt{
+            width: calc(100% / 12 * 8);
+        }
+    }
+
+    .img{
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translate(-60% , -50%);
+    }
+    
+
+    .label{
+        margin-bottom: 5px;
+    }
+
+    .over-title{
+        line-height: 1.5;
+    }
+
+    .mona-content{
+        .--mt-0{
+            margin-top: 0;
+        }
+    }
+
+    .box-mona{
+        margin-top: 30px;
+        .tt{
+            margin-bottom: 10px;
+        }
+    }
+}
+
+.technology{
+    background-color: $b-cl;
+    color: $w-cl;
+    overflow: hidden;
+
+    .columns{
+        justify-content: space-between;
+    }
+
+    .column{
+        &.tx{
+            width: calc(100% / 12 * 3);
+        }
+
+        &.txt{
+            width: calc(100% /12 * 8);
+        }
+    }
+    
+    .head{
+        position: relative;
+        height: 100%;
+        &::before{
+            content: '';
+            width: 1px;
+            height: 100px;
+            background-color: $w-cl;
+            position: absolute;
+            bottom: 30px;
+            left: 0;
+        }
+    }
+
+    .title{
+        display: inline-block;
+    }
+
+    .arrow{
+        width: 30px;
+        height: 30px;
+        background-color: $main-cl;
+        color: $w-cl;
+        border-radius: 100%;
+        @include flex-mid;
+        display: inline-flex;
+        margin-left: 10px;
+
+        img{
+            filter: brightness(0) invert(1);
+        }
+    }
+    
+    .content{
+        p{
+            line-height: 1.5;
+        }
+    }
+}
+
+.patents{
+    .column{
+        &.tx{
+            width: calc(100% /12 * 4);
+        }
+
+        &.txt{
+            width: calc(100% /12 * 8);
+        }
+    }
+
+    .title{
+        margin-bottom: 30px;
+    }
+    .patents-say{
+        .ml-auto{
+            margin-left: auto;
+        }
+    }
+    .say{
+        line-height: 1.5;
+        padding-left: 34px;
+    }
+
+    .mona-content{
+        
+    }
+
+    .mona-box{
+        padding-left: 70px;
+    }
+}
