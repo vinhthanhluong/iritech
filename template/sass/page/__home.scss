@@ -63,6 +63,10 @@
         display: flex;
         align-items: flex-end;
         position: relative;
+        
+        @include max-media($bk-576){
+            flex-wrap: wrap;
+        }
 
         &::after {
             content: '';
@@ -72,6 +76,9 @@
             position: absolute;
             bottom: 10px;
             left: 0;
+            @include max-media($bk-576){
+                bottom: 0;
+            }
         }
     }
 
@@ -79,6 +86,14 @@
         background-color: $g-F2F2-cl;
         position: relative;
         z-index: 1;
+        @include max-media($bk-576){
+            width: 100%;
+        }
+        br{
+            @include max-media($bk-576){
+                display: none;
+            }
+        }
     }
 
     .tab-head {
@@ -86,6 +101,11 @@
         padding-bottom: 16px;
         justify-content: space-evenly;
         width: 100%;
+        @include max-media($bk-576){
+            padding-bottom: 8px;
+            padding-top: 10px;
+            justify-content: space-between
+        }
 
     }
 
@@ -102,6 +122,12 @@
 
     .port-content {
         margin-top: 37px;
+        @include max-media($bk-d-1200){
+            margin-top: 30px;
+        }
+        @include max-media($bk-d-1024){
+            margin-top: 20px;
+        }
     }
 
     .tab-con {
@@ -116,11 +142,21 @@
     .port-box {
         display: flex;
         align-items: center;
+        flex-wrap: wrap;
 
     }
 
     .col {
         width: 50%;
+        @include max-media($bk-d-768){
+            width: 100%;
+        }
+    }
+
+    .content{
+        @include max-media($bk-576){
+            padding-top: 20px;
+        }
     }
 
     .img {
@@ -134,6 +170,9 @@
 
     .title {
         margin-bottom: 8px;
+        @include max-media($bk-d-768){
+            margin-bottom: 5px;
+        }
     }
 
     .desc {
@@ -165,22 +204,46 @@
     background-color: $b-cl;
     color: $w-cl;
     overflow: hidden;
+    @include max-media($bk-d-1440){
+        padding: 100px 0;
+    }
+    @include max-media($bk-d-1200){
+        padding: 80px 0;
+    }
+    @include max-media($bk-d-992){
+        padding: 60px 0;
+    }
+    @include max-media($bk-d-768){
+        padding: 40px 0;
+    }
     .columns {
         justify-content: space-between;
     }
 
     .column {
-        &.tt {
-            width: calc(100% / 12 * 3);
+        &.tx {
+            width: calc(100% / 12 * 4);
+            @include max-media($bk-d-768){
+                width: 100%;
+            }
         }
 
         &.txt {
             width: calc(100% /12 * 6);
+            @include max-media($bk-d-992){
+                width: calc(100% / 12 * 8);
+            }
+            @include max-media($bk-d-768){
+                width: 100%;
+            }
         }
     }
 
     .title {
         margin-bottom: 15px;
+        @include max-media($bk-d-992){
+            margin-bottom: 10px;
+        }
     }
 
     .view-more {
@@ -214,10 +277,16 @@
     .column {
         &.txt {
             width: calc(100% /12 * 3);
+            @include max-media($bk-d-992){
+                width: 100%;
+            }
         }
 
         &.slide {
             width: calc(100% / 12 * 8);
+            @include max-media($bk-d-992){
+                width: 100%;
+            }
         }
     }
 
@@ -227,6 +296,9 @@
 
     .box {
         padding-top: 20px;
+        @include max-media($bk-d-992){
+            padding-top: 10px;
+        }
     }
 
     .desc {
@@ -254,6 +326,9 @@
     .swiper {
         padding: 20px 0 40px;
         margin:  0 -15px;
+        @include max-media($bk-d-1200){
+            margin: 0 -7.5px;
+        }
 
     }
 
@@ -264,6 +339,12 @@
     .swiper-slide {
         width: 50%;
         padding: 0 15px;
+        @include max-media($bk-d-1200){
+            padding: 0 7.5px;
+        }
+        @include max-media($bk-576){
+            width: 100%;
+        }
     }
 
     .img {
@@ -281,6 +362,12 @@
 
     .content {
         padding-top: 30px;
+        @include max-media($bk-d-1200){
+            padding-top: 20px;
+        }
+        @include max-media($bk-d-768){
+            padding-top: 15px;
+        }
 
         .desc {
             @include line-clamp(3);
