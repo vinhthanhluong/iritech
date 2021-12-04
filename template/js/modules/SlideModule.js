@@ -1,4 +1,4 @@
-export default function SlideModule(){
+export default function SlideModule() {
     function slide() {
         let width = $(window).width();
         //console.log(width);
@@ -78,6 +78,14 @@ export default function SlideModule(){
             var dynamic = false;
         }
 
+        //loop
+        const slideLoop = el.querySelector('.not-loop');
+        if (slideLoop) {
+            var loops = false;
+        } else {
+            var loops = true;
+        }
+
         try {
             new Swiper(slider, {
                 speed: 1200,
@@ -86,7 +94,7 @@ export default function SlideModule(){
                 observer: true,
                 observeParents: true,
                 observeSlideChildren: true,
-                loop: true,
+                loop: loops,
 
                 allowTouchMove: notSlide,
 
@@ -120,37 +128,37 @@ export default function SlideModule(){
         try {
             const swiper = new Swiper(sliderContainer, {
                 speed: 1000,
-                    loop: true,
-                    spaceBetween: 20,
-                    slidesPerView: 2,
-                    // autoplay: {
-                    //     delay: 4000,
+                loop: true,
+                spaceBetween: 20,
+                slidesPerView: 2,
+                // autoplay: {
+                //     delay: 4000,
+                // },
+                pagination: {
+                    el: SliderPagination,
+                    clickable: true,
+                },
+
+                navigation: {
+                    nextEl: sliderNextBtn,
+                    prevEl: sliderPrevBtn,
+                },
+
+                breakpoints: {
+                    // 320: {
+                    //     spaceBetween: 50
                     // },
-                    pagination: {
-                        el: SliderPagination,
-                        clickable: true,
-                    },
+                    // 480: {
+                    //     spaceBetween: 30
+                    // },
+                    // 576: {
+                    //     spaceBetween: 0,
 
-                    navigation: {
-                        nextEl: sliderNextBtn,
-                        prevEl: sliderPrevBtn,
-                    },
-
-                    breakpoints: {
-                        // 320: {
-                        //     spaceBetween: 50
-                        // },
-                        // 480: {
-                        //     spaceBetween: 30
-                        // },
-                        // 576: {
-                        //     spaceBetween: 0,
-
-                        // }
-                    }
-                    // observeParents:true,
-                    // observeSlideChildren: true,
-                    // observer: true,
+                    // }
+                }
+                // observeParents:true,
+                // observeSlideChildren: true,
+                // observer: true,
             })
         }
         catch (err) {

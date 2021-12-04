@@ -1,8 +1,7 @@
 .overview{
     overflow: hidden;
     position: relative;
-
-    .columns{
+    .columns{   
         justify-content: space-between;
         align-items: center;
     }
@@ -10,10 +9,19 @@
     .column{
         &.tx{
             width: calc(100% /12 * 3);
+            @include max-media($bk-d-1440){
+                width: calc(100% / 12 * 4);
+            }
+            @include max-media($bk-d-992){
+                width: 100%;
+            }
         }   
 
         &.txt{
             width: calc(100% / 12 * 8);
+            @include max-media($bk-d-992){
+                width: 100%;
+            }
         }
     }
 
@@ -22,11 +30,17 @@
         top: 50%;
         left: 0;
         transform: translate(-60% , -50%);
+        @include max-media($bk-d-992){
+            opacity: .4;
+        }
     }
     
 
     .label{
         margin-bottom: 5px;
+        @include min-media($bk-992){
+            color: $w-cl;
+        }
     }
 
     .over-title{
@@ -41,7 +55,14 @@
 
     .box-mona{
         margin-top: 30px;
+        @include max-media($bk-d-1200){
+            margin-top: 20px;
+        }
+        @include max-media($bk-d-992){
+            margin-top: 15px;
+        }
         .tt{
+            margin-top: 0;
             margin-bottom: 10px;
         }
     }
@@ -51,7 +72,6 @@
     background-color: $b-cl;
     color: $w-cl;
     overflow: hidden;
-
     .columns{
         justify-content: space-between;
     }
@@ -59,10 +79,19 @@
     .column{
         &.tx{
             width: calc(100% / 12 * 3);
+            @include max-media($bk-d-1200){
+                width: calc(100% / 12 * 4);
+            }
+            @include max-media($bk-d-768){
+                width: 100%;
+            }
         }
 
         &.txt{
             width: calc(100% /12 * 8);
+            @include max-media($bk-d-768){
+                width: 100%;
+            }
         }
     }
     
@@ -72,16 +101,28 @@
         &::before{
             content: '';
             width: 1px;
-            height: 100px;
+            // height: 100%;
             background-color: $w-cl;
             position: absolute;
+            top: 140px;
             bottom: 30px;
             left: 0;
+            @include max-media($bk-d-992){
+                top: 110px;
+            }
+            @include max-media($bk-d-768){
+                display: none;
+            }
         }
     }
 
     .title{
         display: inline-block;
+        br{
+            @include max-media($bk-d-768){
+                display: none;
+            }
+        }
     }
 
     .arrow{
@@ -102,23 +143,48 @@
     .content{
         p{
             line-height: 1.5;
+            &:first-child{
+                margin-top: 0;
+            }
+
+            &:last-child{
+                margin-bottom: 0;
+            }
         }
     }
 }
 
 .patents{
+    overflow: hidden;
     .column{
         &.tx{
             width: calc(100% /12 * 4);
+            @include max-media($bk-d-992){
+                width: 100%;
+            }
         }
 
         &.txt{
             width: calc(100% /12 * 8);
+            @include max-media($bk-d-992){
+                width: 100%;
+            }
         }
     }
 
     .title{
         margin-bottom: 30px;
+        @include max-media($bk-d-1200){
+            margin-bottom: 20px;
+        }
+        @include max-media($bk-d-992){
+            margin-bottom: 15px;
+        }
+        br{
+            @include max-media($bk-d-992){
+                display: none;
+            }
+        }
     }
     .patents-say{
         .ml-auto{
@@ -128,13 +194,34 @@
     .say{
         line-height: 1.5;
         padding-left: 34px;
+        @include max-media($bk-d-1200){
+            font-size: 20px;
+        }
+        @include max-media($bk-d-992){
+            font-size: 18px;
+        }
     }
 
     .mona-content{
+        p{
+            &:first-child{
+                margin-top: 0;
+            }
+
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
         
     }
 
     .mona-box{
         padding-left: 70px;
+        @include max-media($bk-d-1440){
+            padding-left: 50px;
+        }
+        @include max-media($bk-d-1200){
+            padding-left: 30px;
+        }
     }
 }
