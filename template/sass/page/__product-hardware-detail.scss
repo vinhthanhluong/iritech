@@ -70,6 +70,15 @@
             @include flex-mid;
             display: inline-flex;
             margin-left: 10px;
+            transition: all .3s ease;
+            &:hover {
+                transform: translateX(10px) rotate(360deg) ;
+                background-color: $w-cl;
+                
+                img{
+                    filter: none;
+                }
+            }
 
             img {
                 filter: brightness(0) invert(1);
@@ -339,10 +348,22 @@
         .column {
             &.tx {
                 width: calc(100% / 12 * 3);
+
+                @include max-media($bk-d-992) {
+                    width: calc(100% / 12 * 4);
+                }
+
+                @include max-media($bk-d-768) {
+                    width: 100%;
+                }
             }
 
             &.txt {
                 width: calc(100% / 12 * 6);
+
+                @include max-media($bk-d-768) {
+                    width: 100%;
+                }
             }
         }
     }
@@ -350,6 +371,12 @@
     .title {
         display: flex;
         align-items: center;
+
+        br {
+            @include max-media($bk-d-768) {
+                display: none;
+            }
+        }
     }
 
     .arrow {
@@ -359,6 +386,16 @@
         border-radius: 100%;
         @include flex-mid;
         margin-left: 15px;
+        flex-shrink: 0;
+        transition: all .3s ease;
+        &:hover {
+            transform: translateX(10px) rotate(360deg) ;
+            background-color: $w-cl;
+            
+            img{
+                filter: none;
+            }
+        }
 
         img {
             filter: brightness(0) invert(1);
@@ -382,6 +419,15 @@
 
         .choose-tt {
             width: 260px;
+
+            @include max-media($bk-d-992) {
+                width: 150px;
+            }
+
+            @include max-media($bk-576) {
+                // width: 120px;
+
+            }
         }
 
         .f-control {
@@ -401,27 +447,37 @@
     }
 
     .container-full {
-        @include min-media($bk-1600){
+        @include min-media($bk-1600) {
             padding: 0;
         }
     }
 
-    
+
 
     .download-wrapper {
         background-color: $w-cl;
         border-radius: 20px;
         padding: 37px 70px 30px;
         margin: 42px 121px 0;
-        @include max-media($bk-d-1600){
+
+        @include max-media($bk-d-1600) {
             margin: 30px 0 0;
         }
-        @include max-media($bk-d-1440){
+
+        @include max-media($bk-d-1440) {
             padding: 30px;
         }
-        @include max-media($bk-d-1200){
+
+        @include max-media($bk-d-1024) {
+            padding: 20px;
         }
-        .container{
+
+        @include max-media($bk-d-768) {
+            padding: 0;
+            border-radius: 0;
+        }
+
+        .container {
             padding: 0;
         }
     }
@@ -429,9 +485,31 @@
     .download-table {
         width: 100%;
 
+        @include max-media($bk-d-768) {
+            display: block;
+            height: 480px;
+            overflow-y: auto;
+        }
+
+        thead,
+        tbody,
+        th,
+        td,
+        tr {
+            @include max-media($bk-d-768) {
+                display: block;
+            }
+        }
+
         thead {
+            tr {
+                @include max-media($bk-d-768) {
+                    display: none;
+                }
+            }
+
             th {
-                text-align: left;   
+                text-align: left;
                 @include fz-18;
 
                 &:nth-child(1) {
@@ -444,27 +522,109 @@
 
                 &:nth-child(3) {
                     width: calc(100% / 12 * 2);
+
+                    @include max-media($bk-d-1024) {
+                        width: calc(100% / 12 * 1);
+                    }
                 }
 
                 &:nth-child(4) {
                     width: calc(100% / 12 * 2);
+
+                    @include max-media($bk-d-1024) {
+                        width: calc(100% / 12 * 3);
+                    }
                 }
             }
         }
 
         tbody {
+            tr {
+                &:nth-child(odd) {
+                    @include max-media($bk-768) {
+                        background-color: $g-E5E5-cl;
+                    }
+                }
+
+                @include max-media($bk-d-768) {
+                    border: 1px solid $g-E5E5-cl;
+                }
+
+
+
+                td {
+                    &:first-child {
+                        font-weight: bold;
+
+                        @include max-media($bk-d-768) {
+                            font-weight: normal;
+                        }
+                    }
+
+
+
+                    &:last-child {
+                        @include max-media($bk-d-1024) {
+                            text-align: right;
+                        }
+
+                        @include max-media($bk-d-768) {
+                            text-align: left;
+                        }
+                    }
+                }
+            }
+
             td {
                 @include fz-16;
                 padding: 15px 10px 0 0;
-                @include max-media($bk-d-1200){
+                vertical-align: top;
+
+                br {
+                    @include max-media($bk-d-768) {
+                        display: none;
+                    }
+                }
+
+                @include max-media($bk-d-1440) {
                     padding: 10px 10px 0 0;
                 }
-            }
-            tr{
-                td{
-                    &:first-child{
+
+                @include max-media($bk-d-768) {
+
+                    position: relative;
+                    padding-left: 50%;
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        top: 6px;
+                        left: 6px;
+                        width: 45%;
+                        padding-right: 10px;
+                        white-space: nowrap;
                         font-weight: bold;
                     }
+
+                    &:nth-child(1) {
+                        &::before {
+                            content: 'Name';
+                        }
+                    }
+
+                    &:nth-child(2) {
+                        &::before {
+                            content: 'Document';
+                        }
+                    }
+
+                    &:nth-child(3) {
+                        &::before {
+                            content: 'Version';
+                        }
+                    }
+
+                    &:nth-child(4) {}
                 }
             }
         }

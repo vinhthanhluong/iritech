@@ -4218,6 +4218,14 @@ html .mfp-wrap {
   -webkit-align-items: center;
   justify-content: center;
   -webkit-justify-content: center;
+  transition: all 0.3s ease;
+}
+.more-about .arrow:hover {
+  transform: translateX(10px) rotate(360deg);
+  background-color: #fff;
+}
+.more-about .arrow:hover img {
+  filter: none;
 }
 .more-about .arrow img {
   filter: brightness(0) invert(1);
@@ -4559,6 +4567,14 @@ html .mfp-wrap {
   -webkit-justify-content: center;
   display: inline-flex;
   margin-left: 10px;
+  transition: all 0.3s ease;
+}
+.technology .arrow:hover {
+  transform: translateX(10px) rotate(360deg);
+  background-color: #fff;
+}
+.technology .arrow:hover img {
+  filter: none;
 }
 .technology .arrow img {
   filter: brightness(0) invert(1);
@@ -4738,6 +4754,14 @@ html .mfp-wrap {
   -webkit-justify-content: center;
   display: inline-flex;
   margin-left: 10px;
+  transition: all 0.3s ease;
+}
+.global-business .txt-wrapper .arrow:hover {
+  transform: translateX(10px) rotate(360deg);
+  background-color: #fff;
+}
+.global-business .txt-wrapper .arrow:hover img {
+  filter: none;
 }
 .global-business .txt-wrapper .arrow img {
   filter: brightness(0) invert(1);
@@ -4940,6 +4964,14 @@ html .mfp-wrap {
   -webkit-justify-content: center;
   display: inline-flex;
   margin-left: 10px;
+  transition: all 0.3s ease;
+}
+.hardware-detail .product-tx .arrow:hover {
+  transform: translateX(10px) rotate(360deg);
+  background-color: #fff;
+}
+.hardware-detail .product-tx .arrow:hover img {
+  filter: none;
 }
 .hardware-detail .product-tx .arrow img {
   filter: brightness(0) invert(1);
@@ -5184,12 +5216,32 @@ html .mfp-wrap {
 .download-option .head .column.tx {
   width: calc(100% / 12 * 3);
 }
+@media screen and (max-width: 991px) {
+  .download-option .head .column.tx {
+    width: calc(100% / 12 * 4);
+  }
+}
+@media screen and (max-width: 767px) {
+  .download-option .head .column.tx {
+    width: 100%;
+  }
+}
 .download-option .head .column.txt {
   width: calc(100% / 12 * 6);
+}
+@media screen and (max-width: 767px) {
+  .download-option .head .column.txt {
+    width: 100%;
+  }
 }
 .download-option .title {
   display: flex;
   align-items: center;
+}
+@media screen and (max-width: 767px) {
+  .download-option .title br {
+    display: none;
+  }
 }
 .download-option .arrow {
   width: 30px;
@@ -5207,6 +5259,15 @@ html .mfp-wrap {
   justify-content: center;
   -webkit-justify-content: center;
   margin-left: 15px;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+.download-option .arrow:hover {
+  transform: translateX(10px) rotate(360deg);
+  background-color: #fff;
+}
+.download-option .arrow:hover img {
+  filter: none;
 }
 .download-option .arrow img {
   filter: brightness(0) invert(1);
@@ -5223,6 +5284,11 @@ html .mfp-wrap {
 }
 .download-option .choose .choose-tt {
   width: 260px;
+}
+@media screen and (max-width: 991px) {
+  .download-option .choose .choose-tt {
+    width: 150px;
+  }
 }
 .download-option .choose .f-control {
   width: 186px;
@@ -5258,11 +5324,43 @@ html .mfp-wrap {
     padding: 30px;
   }
 }
+@media screen and (max-width: 1023px) {
+  .download-option .download-wrapper {
+    padding: 20px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .download-option .download-wrapper {
+    padding: 0;
+    border-radius: 0;
+  }
+}
 .download-option .download-wrapper .container {
   padding: 0;
 }
 .download-option .download-table {
   width: 100%;
+}
+@media screen and (max-width: 767px) {
+  .download-option .download-table {
+    display: block;
+    height: 480px;
+    overflow-y: auto;
+  }
+}
+@media screen and (max-width: 767px) {
+  .download-option .download-table thead,
+.download-option .download-table tbody,
+.download-option .download-table th,
+.download-option .download-table td,
+.download-option .download-table tr {
+    display: block;
+  }
+}
+@media screen and (max-width: 767px) {
+  .download-option .download-table thead tr {
+    display: none;
+  }
 }
 .download-option .download-table thead th {
   text-align: left;
@@ -5282,25 +5380,91 @@ html .mfp-wrap {
 .download-option .download-table thead th:nth-child(3) {
   width: calc(100% / 12 * 2);
 }
+@media screen and (max-width: 1023px) {
+  .download-option .download-table thead th:nth-child(3) {
+    width: calc(100% / 12 * 1);
+  }
+}
 .download-option .download-table thead th:nth-child(4) {
   width: calc(100% / 12 * 2);
+}
+@media screen and (max-width: 1023px) {
+  .download-option .download-table thead th:nth-child(4) {
+    width: calc(100% / 12 * 3);
+  }
+}
+@media screen and (max-width: 768px) {
+  .download-option .download-table tbody tr:nth-child(odd) {
+    background-color: #E5E5E5;
+  }
+}
+@media screen and (max-width: 767px) {
+  .download-option .download-table tbody tr {
+    border: 1px solid #E5E5E5;
+  }
+}
+.download-option .download-table tbody tr td:first-child {
+  font-weight: bold;
+}
+@media screen and (max-width: 767px) {
+  .download-option .download-table tbody tr td:first-child {
+    font-weight: normal;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .download-option .download-table tbody tr td:last-child {
+    text-align: right;
+  }
+}
+@media screen and (max-width: 767px) {
+  .download-option .download-table tbody tr td:last-child {
+    text-align: left;
+  }
 }
 .download-option .download-table tbody td {
   font-size: 16px;
   padding: 15px 10px 0 0;
+  vertical-align: top;
 }
 @media screen and (max-width: 991px) {
   .download-option .download-table tbody td {
     font-size: 14px;
   }
 }
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 767px) {
+  .download-option .download-table tbody td br {
+    display: none;
+  }
+}
+@media screen and (max-width: 1439px) {
   .download-option .download-table tbody td {
     padding: 10px 10px 0 0;
   }
 }
-.download-option .download-table tbody tr td:first-child {
-  font-weight: bold;
+@media screen and (max-width: 767px) {
+  .download-option .download-table tbody td {
+    position: relative;
+    padding-left: 50%;
+  }
+  .download-option .download-table tbody td::before {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+    font-weight: bold;
+  }
+  .download-option .download-table tbody td:nth-child(1)::before {
+    content: "Name";
+  }
+  .download-option .download-table tbody td:nth-child(2)::before {
+    content: "Document";
+  }
+  .download-option .download-table tbody td:nth-child(3)::before {
+    content: "Version";
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
