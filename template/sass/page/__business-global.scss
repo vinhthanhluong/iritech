@@ -50,25 +50,7 @@
         }
 
         .arrow{
-            width: 30px;
-            height: 30px;
-            border-radius: 100%;
-            background-color: $main-cl;
-            @include flex-mid;
-            display: inline-flex;
             margin-left: 10px;
-            transition: all .3s ease;
-            &:hover {
-                transform: translateX(10px) rotate(360deg) ;
-                background-color: $w-cl;
-                
-                img{
-                    filter: none;
-                }
-            }
-            img{
-                filter: brightness(0 )invert(1);
-            }
         }
 
         .desc{

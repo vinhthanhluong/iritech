@@ -63,26 +63,7 @@
         }
 
         .arrow {
-            width: 30px;
-            height: 30px;
-            border-radius: 100%;
-            background-color: $main-cl;
-            @include flex-mid;
-            display: inline-flex;
             margin-left: 10px;
-            transition: all .3s ease;
-            &:hover {
-                transform: translateX(10px) rotate(360deg) ;
-                background-color: $w-cl;
-                
-                img{
-                    filter: none;
-                }
-            }
-
-            img {
-                filter: brightness(0) invert(1);
-            }
         }
     }
 
@@ -231,8 +212,12 @@
 }
 
 .specifications {
-    background-color: #E5E5E5;
     overflow: hidden;
+
+    &.bg-cl{
+        background-color: #E5E5E5;
+
+    }
 
     .columns {
         justify-content: space-between;
@@ -315,10 +300,7 @@
     }
 
     .mona-box {
-
         p {
-            @include fz-18;
-            font-weight: 500;
             margin: 0 0 10px;
         }
 
@@ -380,26 +362,8 @@
     }
 
     .arrow {
-        width: 30px;
-        height: 30px;
-        background-color: $main-cl;
-        border-radius: 100%;
-        @include flex-mid;
         margin-left: 15px;
         flex-shrink: 0;
-        transition: all .3s ease;
-        &:hover {
-            transform: translateX(10px) rotate(360deg) ;
-            background-color: $w-cl;
-            
-            img{
-                filter: none;
-            }
-        }
-
-        img {
-            filter: brightness(0) invert(1);
-        }
     }
 
     .choose-t {

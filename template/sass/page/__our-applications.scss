@@ -1,0 +1,102 @@
+.applications{
+    .column{
+        width: calc(100% / 3);
+        @include max-media($bk-d-1200){
+            width: calc(100% / 2);
+        }
+        @include max-media($bk-576){
+            width: 100%;
+        }
+    }
+
+    .head{
+        margin-bottom: 40px;
+        @include max-media($bk-d-1200){
+            margin-bottom: 30px;
+        }
+        @include max-media($bk-d-992){
+            margin-bottom: 20px;
+        }
+    }
+
+    .head-center{
+        max-width: 1076px;
+        margin: 0 auto 40px;
+        border-bottom: 1px solid $b-cl;
+        padding-bottom: 10px;
+        text-align: center;
+        @include max-media($bk-d-1200){
+            margin-bottom: 30px;
+        }
+        @include max-media($bk-d-992){
+            margin-bottom: 20px;
+        }
+
+        .title{
+            margin-bottom: 0;
+        }
+    }
+
+    .title{
+        margin-bottom: 23px;
+        @include max-media($bk-d-1200){
+            margin-bottom: 15px;
+        }
+    }
+
+    .content{
+        padding-top: 20px;
+        @include max-media($bk-d-992){
+            padding-top: 15px;
+        }
+    }
+
+    .app-box{
+        &:hover{
+            .img{
+                img{
+                    transform:scale(1.1);
+                }
+            }
+            .app-tt{
+                color: $main-cl;
+            }
+        }
+    }
+
+    .img{
+        display: block;
+        border-radius: 20px;
+        box-shadow: 10px 10px 30px rgba($color: $b-cl, $alpha: .25);
+        overflow: hidden;
+        img{
+            border-radius: 20px;
+            transition:  all .3s ease;
+        }
+    }
+
+    .app-tt{
+        display: block;
+        margin-bottom: 10px;
+        transition: all .3s ease;
+        @include max-media($bk-d-992){
+            margin-bottom: 5px;
+        }
+    }
+
+    .date{
+        margin-bottom: 10px;
+        @include max-media($bk-d-992){
+            margin-bottom: 5px;
+        }
+    }
+
+    .desc{
+        @include line-clamp(3);
+        line-height: 1.5;
+    }
+
+ 
+
+   
+}

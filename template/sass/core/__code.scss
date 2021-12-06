@@ -2,6 +2,10 @@
     color: $main-cl;
 }
 
+.w-cl{
+    color: $w-cl;
+}
+
 .f-semi{
     font-weight: 600;
 }
@@ -14,3 +18,25 @@
     background-color: $g-F2F2-cl;
 }
 
+.arrow{
+    margin-left: 15px;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    background-color: $main-cl;
+    transition: all .3s ease;
+    @include flex-mid;
+    display: inline-flex;
+
+    &:hover{
+        background-color: $w-cl;
+        transform: translateX(10px) rotate(360deg);
+        img{
+            filter: none;
+        }
+    }
+
+    img{
+        filter: brightness(0) invert(1);
+    }
+}
