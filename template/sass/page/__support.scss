@@ -1,0 +1,101 @@
+.support{
+    .column{
+        width: calc(100% / 3);
+        @include max-media($bk-d-1200){
+            width: calc(100% / 2);
+        }
+        @include max-media($bk-d-768){
+            width: 100%;
+        }
+    }
+
+    .head{
+        margin-bottom: 40px;   
+        display: flex;
+        align-items: center;
+        @include max-media($bk-d-1200){
+            margin-bottom: 30px;
+        }
+        @include max-media($bk-576){
+            align-items: flex-end;
+            margin-bottom: 25px;
+        }
+    }
+
+    .title{
+        br{
+            @include max-media($bk-576){
+                display: none;
+            }
+        }
+    }
+
+    .arrow{
+        flex-shrink: 0;
+        margin-left: 20px;
+        @include max-media($bk-576){
+            margin-left: 10px;
+        }
+    }
+
+    .content{
+        padding: 30px;
+        box-shadow: 10px 10px 30px rgba($color: $b-cl, $alpha: .25);
+        border-radius: 30px;
+        min-height: 222px;
+        display: flex;
+        flex-direction: column;
+        @include max-media($bk-d-1200){
+            padding: 20px;
+            min-height: 180px;
+        }
+        @include max-media($bk-d-768){
+            padding: 20px;
+            display: block;
+            min-height: 100%;
+        }
+        
+        &:hover{
+            .sup-tt{
+                color: $main-cl;
+                img{
+                    transform: translateX(-10px);
+                }
+            }
+        }
+    }
+
+    .desc{
+        line-height: 1.5;
+        @include line-clamp(3);
+       
+    }
+
+    .sup-tt{
+        @include fz-18;
+        font-weight: 600;
+        transition: all .3s ease;
+        margin-top: auto;
+        display: block;
+        @include max-media($bk-d-768){
+            margin-top: 40px;
+        }
+        img{
+            display: inline-block;
+            margin-left: 20px;
+            transition: all .3s ease;
+        }
+
+        br{
+            @include max-media($bk-d-768){
+                display: none;
+            }
+        }
+    }
+
+
+
+
+
+
+}
