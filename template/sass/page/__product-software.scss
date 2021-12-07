@@ -1,4 +1,5 @@
 .software {
+    overflow: hidden;
     .head {
         margin-bottom: 42px;
         @include max-media($bk-d-1200){

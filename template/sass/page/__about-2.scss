@@ -1,22 +1,42 @@
-.client-partners{
-    .clp-wrapper{
+.client-partners {
+    .clp-wrapper {
         background-color: $b-cl;
         color: $w-cl;
 
-        .clp-wrap{
+        .clp-wrap {
             max-width: 1000px;
             margin: 0 auto;
         }
 
-        .clp-title{
+        .clp-title {
             margin-bottom: 20px;
+
+            @include max-media($bk-d-768) {
+                margin-bottom: 10px;
+            }
         }
 
-        .clp-desc{
+        .clp-desc {
             line-height: 1.5;
         }
     }
 
-    
+    .clp-head {
+        text-align: center;
+        max-width: 950px;
+        margin: 0 auto;
+        .title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .arrow{
+            margin-right: 20px;
+        }
+    }
+
+
 
 }

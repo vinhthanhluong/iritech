@@ -1,4 +1,5 @@
 .applications{
+    overflow: hidden;
     .column{
         width: calc(100% / 3);
         @include max-media($bk-d-1200){

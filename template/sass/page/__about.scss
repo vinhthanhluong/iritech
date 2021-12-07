@@ -24,6 +24,7 @@
         position: absolute;
         bottom: 25px;
         left: calc((100vw - 1540px) / 2 + 11px);
+        animation: scale-in-top 1.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
         @include max-media($bk-d-1600){
             left: 15px;
             height: 80px;
@@ -49,6 +50,7 @@
         background-color: #EBEBEB;
         @include pos-mid;
         z-index: -1;
+        animation: scale-center 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
         @include max-media($bk-d-1200){
             width: 400px;
             height: 400px;
@@ -56,6 +58,9 @@
         @include max-media($bk-d-992){
             width: 380px;
             height: 380px;
+        }
+        @include max-media($bk-d-768){
+            animation: none;
         }
         @include max-media($bk-576){
             width: 360px;
@@ -214,6 +219,9 @@
             background-color: rgba($color: $main-cl, $alpha: .4);
             @include pos-mid;
             z-index: -1;
+            @include min-media($bk-1200){
+                animation: float 3s ease-in-out infinite;
+            }
         }
     }
 
@@ -236,8 +244,7 @@
             display: none;
         }
 
-        &::after {
-            content: '';
+        .bg-img-main {
             height: 520px;
             border-radius: 100%;
             background-color: #B72424;
