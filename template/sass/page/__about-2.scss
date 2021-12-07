@@ -1,4 +1,5 @@
 .client-partners {
+    overflow: hidden;
     .clp-wrapper {
         background-color: $b-cl;
         color: $w-cl;
@@ -30,12 +31,60 @@
             align-items: center;
             justify-content: center;
             margin-bottom: 20px;
+            @include max-media($bk-1200){
+                margin-bottom: 15px;
+            }
+            @include max-media($bk-576){
+                margin-bottom: 10px;
+            }
         }
 
         .arrow{
             margin-right: 20px;
         }
     }
+
+    .clp-main{
+        margin-top: 40px;
+        @include max-media($bk-d-1200){
+            margin-top: 30px;
+        }
+        @include max-media($bk-576){
+            margin-top: 20px;
+        }
+    }
+
+    .column{
+        width: calc(100% / 4);
+        @include max-media($bk-d-992){
+            width: calc(100% / 3);
+        }
+        @include max-media($bk-576){
+            width: 50%;
+        }
+    }
+
+    .clp-box{
+        border: 1px solid rgba($color: $b-cl, $alpha: .3);
+        border-radius: 20px;
+        background-color: $w-cl;
+        transition: all .3s ease;
+        &:hover{
+            box-shadow: 10px 10px 30px rgba($color: $b-cl, $alpha: .25);
+            border-color: transparent;
+        }
+
+        .clp-img{
+            padding: 24px 30px;
+            display: block;
+            img{
+                margin: 0 auto;
+                object-fit: cover;
+            }
+        }
+    }
+
+
 
 
 
