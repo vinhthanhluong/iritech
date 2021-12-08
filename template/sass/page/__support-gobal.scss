@@ -32,9 +32,16 @@
         box-shadow: 10px 10px 30px rgba($color: $b-cl, $alpha: .25);
         z-index: 1;
         position: relative;
+        padding: 80px 0;
+        @include max-media($bk-d-1200){
+            padding: 60px 15px;
+        }
+        @include max-media($bk-d-992){
+            padding: 40px 15px;
+        }
 
         @include max-media($bk-576) {
-            padding: 20px 0;
+            padding: 20px 5px;
         }
 
         &::before {
@@ -47,9 +54,19 @@
             top: 50%;
             left: 30px;
             transform: translateY(-50%);
-
-            @include max-media($bk-d-1900) {
-                display: none;
+            left: 1.7%;
+            @include max-media(1680px) {
+                // display: none;
+                left: 10px;
+            }
+            @include max-media($bk-d-1570){
+                left: 25px;
+            }
+            @include max-media($bk-d-1200){
+                left: 10px;
+            }
+            @include max-media($bk-576){
+                left: 4px;
             }
         }
 
@@ -60,6 +77,12 @@
         .column {
             &.tx {
                 width: calc(100% /12 * 4);
+                @include max-media($bk-d-1200){
+                    width: calc(100% / 12 * 5);
+                }
+                @include max-media($bk-d-768){
+                    width: calc(100% / 12 * 6);
+                }
 
                 @include max-media($bk-576) {
                     width: 100%;
@@ -445,7 +468,7 @@
         height: auto;
         border-radius: 100px;
         background-color: $w-cl;
-        padding: 10px 30px;
+        padding: 11px 30px 9px;
         text-transform: capitalize;
         font-weight: 600;
         box-shadow: 10px 10px 30px rgba($color: $b-cl, $alpha: .25);

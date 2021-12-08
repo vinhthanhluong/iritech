@@ -42,6 +42,9 @@
         @include max-media($bk-d-1200){
             margin-bottom: 5px;
         }
+        @include max-media($bk-d-992){
+            max-width: 100%;
+        }
     }
 
     .desc {
@@ -122,7 +125,7 @@
 
     .blog-content {
         margin-top: 30px;
-        @include max-media($bk-d-992){
+        @include max-media($bk-1024){
             margin-top: 20px;
         }
 
@@ -177,8 +180,11 @@
         color: $w-cl;
         padding: 85px 80px;
         border-radius: 20px;
-        @include max-media($bk-d-1440){
+        @include max-media($bk-d-1900){
             padding: 50px;
+        }
+        @include max-media($bk-d-1440){
+            padding: 40px;
         }
         @include max-media($bk-d-1200){
             padding: 30px;
@@ -196,7 +202,7 @@
         .bx-desc {
             line-height: 1.5;
             margin-bottom: 20px;
-            @include line-clamp(5);
+            @include line-clamp(4);
             @include max-media($bk-d-992){
                 margin-bottom: 15px;
             }

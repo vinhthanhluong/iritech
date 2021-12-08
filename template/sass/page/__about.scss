@@ -25,16 +25,22 @@
         bottom: 25px;
         left: calc((100vw - 1540px) / 2 + 11px);
         animation: scale-in-top 1.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-        @include max-media($bk-d-1600){
-            left: 15px;
+        // @include max-media($bk-d-1600){
+        //     left: 15px;
+        //     height: 80px;
+        // }
+        @include max-media($bk-d-1570){
+            left:calc(5% + 15px);
             height: 80px;
+            bottom: 15px;
         }
         @include max-media($bk-d-1200){
             height: 60px;
-            bottom: 15px;
+            bottom: 10px;
+            left: 30px;
         }
         @include max-media($bk-d-992){
-            height: 30px;
+            height: 40px;
         }
         @include max-media($bk-d-768){
             display: none;
@@ -222,6 +228,10 @@
             @include min-media($bk-1200){
                 animation: float 3s ease-in-out infinite;
             }
+            @include max-media($bk-d-992){
+                width: 42px;
+                height: 42px;
+            }
         }
     }
 
@@ -361,8 +371,10 @@
         width: calc(100% / 3);
         padding: 80px 0;
         padding-left: calc((100% - 1570px) / 2);
-        
-        @include max-media($bk-d-1600){
+        @include max-media($bk-d-1570){
+            padding-left: 5%;
+        }
+        @include max-media($bk-d-1200){
             padding-left: 15px;
         }
 

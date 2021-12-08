@@ -77,6 +77,15 @@
         .clp-img{
             padding: 24px 30px;
             display: block;
+            @include max-media($bk-d-1200){
+                padding: 20px 30px;
+            }
+            @include max-media($bk-d-992){
+                padding: 16px 30px;
+            }
+            @include max-media($bk-576){
+                padding: 12px 30px;
+            }
             img{
                 margin: 0 auto;
                 object-fit: cover;

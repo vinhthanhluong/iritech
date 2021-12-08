@@ -88,6 +88,11 @@ li {
     width: $container-width;
     margin: 0 auto;
     padding: 0 $padding;
+    
+    @media screen and (min-width: 1200px) and (max-width: 1569px) {
+        width: 90%;
+        padding: 0;
+    }
 }
 
 .columns {

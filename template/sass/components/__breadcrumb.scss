@@ -6,8 +6,10 @@
         // padding: 10px 0;
 
         @include max-media($bk-576) {
-            overflow-x: scroll;
+            overflow-x: auto;
             white-space: nowrap;
+
+            @include custom-horizontal-scrollbar(2px )
         }
 
 

@@ -65,7 +65,7 @@
         }
 
         .banner-ig {
-            .tt-big {
+            .text-big {
                 animation: scale-out-center .5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
                 @include max-media($bk-d-768) {
                     animation: none !important;
@@ -92,7 +92,7 @@
             }
 
             .banner-ig {
-                .tt-big {
+                .text-big {
                     animation: scale-up-center 1s both .6s;
                 }
             }
@@ -180,17 +180,20 @@
             text-transform: uppercase;
             letter-spacing: 20px;
             line-height: 1;
+            // @include max-media($bk-d-1900){
+            //     font-size: 100px;
+            // }
 
             @include max-media($bk-d-1440) {
-                font-size: 100px;
-            }
-
-            @include max-media($bk-d-1200) {
                 font-size: 90px;
             }
 
+            @include max-media($bk-d-1200) {
+                font-size: 80px;
+            }
+
             @include max-media($bk-d-992) {
-                font-size: 50px;
+                font-size: 45px;
             }
 
             @include max-media($bk-576) {
@@ -201,9 +204,9 @@
         .tt-big {
             padding: 122px 0;
             position: relative;
+            transform: translateX(-10px);
 
             @include max-media($bk-d-1200) {
-                transform: translateX(-10px);
                 padding: 80px 0;
             }
 
@@ -217,47 +220,48 @@
 
             p {
                 font-weight: 600;
-                font-size: 745px;
-                font-size: 950px;
                 font-size: 1160px;
                 @include pos-mid;
                 font-variant: small-caps;
                 line-height: .5;
-                top: 29%;
                 color: $main-cl;
 
-                @include max-media($bk-d-1600) {
-                    font-size: 800px;
-                    top: 34%;
+                position: static;
+                transform: translateY(-119px);
+                transform: translateY(-21%);
+                top: 0;
+
+                @include max-media($bk-1600) {
+                    font-size: 700px;
+
+                    // transform: translateY(-69px);
                 }
 
-                @include max-media($bk-d-1440) {
-                    font-size: 600px;
-                    top: 36%;
+                @include max-media($bk-1440) {
+                    font-size: 500px;
+                    // transform: translateY(-49px);
+                    transform: translateY(-20%);
                 }
 
                 @include max-media($bk-d-1200) {
                     font-size: 400px;
-                    top: 39%;
-                    position: static;
-                    transform: translateY(-39px);
-                    top: 0;
+                    // transform: translateY(-39px);
                 }
 
                 @include max-media($bk-d-992) {
-                    font-size: 300px;
-                    top: 0;
-                    position: static;
-                    transform: translateY(-29px);
+                    font-size: 280px;
+                    // transform: translateY(-29px);
                 }
 
                 @include max-media($bk-d-768) {
-                    transform: translateY(-20px);
+                    // transform: translateY(-20px);
+                    transform: translateY(-13%);
                 }
 
                 @include max-media($bk-576) {
                     font-size: 180px;
-                    transform: translateY(-9px);
+                    // transform: translateY(-9px);
+                    transform: translateY(-9%);
                 }
 
             }
@@ -266,6 +270,26 @@
         .banner-img {
             position: relative;
             z-index: 1;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 80%;
+
+            @include max-media($bk-1600){
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                max-width: 80%;
+            }
+            @include max-media($bk-1440){
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                max-width: 80%;
+            }
 
             @include max-media($bk-d-1200) {
                 position: absolute;

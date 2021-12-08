@@ -35,6 +35,8 @@
     .product-tx {
         .title {
             margin-bottom: 30px;
+            display: flex;
+            align-items: center;
 
             @include max-media($bk-d-1200) {
                 margin-bottom: 20px;
@@ -227,7 +229,7 @@
         &.tx {
             width: calc(100% / 12 * 3);
 
-            @include max-media($bk-d-1200) {
+            @include max-media($bk-d-1440) {
                 width: calc(100% /12 * 5);
             }
 
@@ -422,19 +424,26 @@
         background-color: $w-cl;
         border-radius: 20px;
         padding: 37px 70px 30px;
-        margin: 42px 121px 0;
+        margin: 42px auto 0;
+        width: 100%;
+        max-width: 1678px;
+
 
         @include max-media($bk-d-1600) {
-            margin: 30px 0 0;
+            margin: 30px auto 0;
+            padding: 37px 0 30px;
         }
 
         @include max-media($bk-d-1440) {
-            padding: 30px;
+            padding: 30px 0;
         }
-
+        @include max-media($bk-d-1200){
+            padding: 30px 15px;
+        }
         @include max-media($bk-d-1024) {
-            padding: 20px;
+            padding: 20px 5px;
         }
+       
 
         @include max-media($bk-d-768) {
             padding: 0;
@@ -442,7 +451,13 @@
         }
 
         .container {
-            padding: 0;
+            @include min-media($bk-1200){
+                padding: 0;
+            }
+            @include max-media($bk-d-768){
+                padding: 0;
+            }
+            // width: 100%;
         }
     }
 
@@ -453,6 +468,7 @@
             display: block;
             height: 480px;
             overflow-y: auto;
+            @include custom-vertical-scrollbar(2px ,$g-cl)
         }
 
         thead,
@@ -505,7 +521,7 @@
         tbody {
             tr {
                 &:nth-child(odd) {
-                    @include max-media($bk-768) {
+                    @include max-media($bk-d-768) {
                         background-color: $g-E5E5-cl;
                     }
                 }

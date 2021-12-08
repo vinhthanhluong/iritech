@@ -88,14 +88,14 @@
             @include max-media($bk-d-1200){
                 width: calc(100% / 12 * 4);
             }
-            @include max-media($bk-d-768){
+            @include max-media($bk-d-992){
                 width: 100%;
             }
         }
 
         &.txt{
             width: calc(100% /12 * 8);
-            @include max-media($bk-d-768){
+            @include max-media($bk-d-992){
                 width: 100%;
             }
         }
@@ -115,9 +115,6 @@
             left: 0;
             animation: scale-in-top 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
             @include max-media($bk-d-992){
-                top: 110px;
-            }
-            @include max-media($bk-d-768){
                 display: none;
             }
         }
@@ -126,7 +123,7 @@
     .title{
         display: inline-block;
         br{
-            @include max-media($bk-d-768){
+            @include max-media($bk-d-992){
                 display: none;
             }
         }
