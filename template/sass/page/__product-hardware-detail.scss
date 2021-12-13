@@ -58,10 +58,10 @@
             width: auto;
             height: auto;
 
-            &:hover {
-                background-color: $main-cl;
-                letter-spacing: 2px;
-            }
+            // &:hover {
+            //     background-color: $main-cl;
+            //     letter-spacing: 2px;
+            // }
         }
 
         .arrow {
@@ -292,6 +292,8 @@
 
         img {
             margin-right: 10px;
+            width: 15px;
+            height: 15px;
         }
     }
 

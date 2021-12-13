@@ -17,7 +17,7 @@
 }
 
 ::selection {
-	background-color: $main-cl;
+	background-color: rgba($color: $b-cl, $alpha: .8);
 	color: $t-w-cl;
 }
 
@@ -55,7 +55,7 @@ html {
     font-display: swap;
     line-height: $lh-body;
     // color: $cl-body;
-    @include custom-scrollbar(10px);
+    @include custom-scrollbar(10px, $b-cl );
 }
 
 a {

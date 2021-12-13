@@ -44,7 +44,8 @@
 
     .title {
         margin-bottom: 30px;
-
+        display: flex;
+        align-items: center;
         @include max-media($bk-d-1200) {
             margin-bottom: 20px;
         }
@@ -65,10 +66,10 @@
         width: auto;
         height: auto;
 
-        &:hover {
-            background-color: $main-cl;
-            letter-spacing: 2px;
-        }
+        // &:hover {
+        //     background-color: $main-cl;
+        //     letter-spacing: 2px;
+        // }
     }
 
     .arrow {

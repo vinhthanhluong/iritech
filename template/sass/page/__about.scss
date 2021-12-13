@@ -23,17 +23,17 @@
         background-color: $b-cl;
         position: absolute;
         bottom: 25px;
-        left: calc((100vw - 1540px) / 2 + 11px);
+        left: calc((100vw - 1540px) / 2 );
     
         @include max-media($bk-d-1570){
-            left:calc(5% + 15px);
+            left:5%;
             height: 80px;
             bottom: 15px;
         }
         @include max-media($bk-d-1200){
             height: 60px;
             bottom: 10px;
-            left: 30px;
+            left: 15px;
         }
         @include max-media($bk-d-992){
             height: 40px;

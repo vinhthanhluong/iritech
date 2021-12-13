@@ -7,8 +7,15 @@
     .head {
         text-align: center;
         margin-bottom: 30px;
+      
         @include max-media($bk-d-1200){
             margin-bottom: 20px;
+        }
+
+        .title{
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
     }
 
@@ -51,6 +58,7 @@
         line-height: 1.5;
         margin-bottom: 20px;
         @include line-clamp(3);
+        max-width: 320px;
         @include max-media($bk-d-1200){
             margin-bottom: 15px;
         }
@@ -64,8 +72,9 @@
         text-transform: none;
         width: auto;
         height: auto;
-        padding: 10px 30px;
+        padding: 10px 40px;
         box-shadow: 10px 10px 30px rgba($color: $b-cl, $alpha: .25);
+        @include fz-16;
         @include max-media($bk-d-992){
             padding: 8px 22px;
         }
@@ -130,7 +139,7 @@
 
             &.active {
                 display: block;
-                animation: OutIn 1s;
+                animation: showTab 1s;
             }
         }
     }
