@@ -23,11 +23,20 @@
             margin-left: 16px;
         }
     }
+    .columns{
+        justify-content: space-between;
+        margin: -15px;
+        @include  max-media($bk-d-576){
+            margin: -10px;
+        }
+    }
 
     .column {
-        width: 50%;
+        width: calc(100% / 12 * 5.5);
+        padding: 15px;
         @include max-media($bk-d-576){
             width: 100%;
+            padding: 10px;
         }
     }
 
@@ -52,7 +61,7 @@
 
     .img {
         display: block;
-        box-shadow: 10px 10px 30px rgba($color: $b-cl, $alpha: .25);
+        // box-shadow: 10px 10px 30px rgba($color: $b-cl, $alpha: .25);
         position: relative;
         overflow: hidden;
         border-radius: 20px;
@@ -99,9 +108,9 @@
 
 
     .content{
-        margin-top: 20px;
+        margin-top: 15px;
         @include max-media($bk-d-992){
-            margin-top: 15px;
+            // margin-top: 15px;
         }
         @include max-media($bk-d-768){
             margin-top: 10px;

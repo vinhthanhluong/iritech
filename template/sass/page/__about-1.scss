@@ -30,7 +30,6 @@
         top: 50%;
         left: 0;
         transform: translate(-60% , -50%);
-        animation: rotate-in-2-cw 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
         @include max-media($bk-d-992){
             opacity: .4;
             animation: none;
@@ -110,10 +109,9 @@
             // height: 100%;
             background-color: $w-cl;
             position: absolute;
-            top: 140px;
-            bottom: 30px;
+            top: 120px;
+            bottom: 0;
             left: 0;
-            animation: scale-in-top 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
             @include max-media($bk-d-992){
                 display: none;
             }
@@ -180,13 +178,26 @@
         }
     }
     .patents-say{
+        padding-left: 40px;
+        @include max-media($bk-d-1440){
+            padding-left: 20px;
+        }
+        @include max-media($bk-d-1200){
+            padding-left: 0;
+        }
         .ml-auto{
             margin-left: auto;
         }
     }
     .say{
         line-height: 1.5;
-        padding-left: 34px;
+        padding-left: 40px;
+        @include max-media($bk-d-1900){
+            font-size: 22px;
+        }
+        @include max-media($bk-d-1440){
+            padding-left: 30px;
+        }
         @include max-media($bk-d-1200){
             font-size: 20px;
         }

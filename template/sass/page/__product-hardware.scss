@@ -252,10 +252,6 @@
         font-weight: normal;
         width: auto;
         height: auto;
-        &:hover{
-            background-color: $main-cl;
-            color: $w-cl;
-            letter-spacing: 2px;
-        }
+       
     }
 }

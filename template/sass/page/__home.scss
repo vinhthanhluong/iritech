@@ -24,7 +24,7 @@
             &::before {
                 content: '';
                 width: 1px;
-                height: calc(100% - 60px);
+                height: 50%;
                 background-color: $b-cl;
                 position: absolute;
                 top: 15px;
@@ -70,20 +70,28 @@
 
         &::after {
             content: '';
-            width: 100%;
             height: 1px;
             background-color: $b-cl;
             position: absolute;
-            bottom: 10px;
-            left: 0;
+            bottom: 15px;
+            right: 0;
+            width: calc(100% - 140px);
+            @include max-media($bk-d-992){
+                width: calc(100% - 115px);
+                bottom: 12px;
+            }
+            @include max-media($bk-768){
+                width: calc(100% - 110px);
+            }
             @include max-media($bk-576){
+                width: 100%;
                 bottom: 0;
             }
         }
     }
 
     .port-title {
-        background-color: $g-F2F2-cl;
+        // background-color: $g-F2F2-cl;
         position: relative;
         z-index: 1;
         @include max-media($bk-576){
@@ -98,11 +106,14 @@
 
     .tab-head {
         display: flex;
-        padding-bottom: 16px;
+        padding-bottom: 23px;
         justify-content: space-evenly;
         width: 100%;
+        @include max-media($bk-d-992){
+            padding-bottom: 17px;
+        }
         @include max-media($bk-576){
-            padding-bottom: 8px;
+            padding-bottom: 5px;
             padding-top: 10px;
             justify-content: space-between
         }
@@ -189,13 +200,6 @@
         text-transform: none;
         font-weight: normal;
         margin-top: 20px;
-
-        &:hover {
-            background-color: $main-cl;
-            color: $w-cl;
-            letter-spacing: 2px;
-        }
-
     }
 }
 
@@ -222,7 +226,10 @@
 
     .column {
         &.tx {
-            width: calc(100% / 12 * 4);
+            width: calc(100% / 12 * 3);
+            @include max-media($bk-d-992){
+                width: calc(100% /12 * 4);
+            }
             @include max-media($bk-d-768){
                 width: 100%;
             }
@@ -231,7 +238,7 @@
         &.txt {
             width: calc(100% /12 * 6);
             @include max-media($bk-d-992){
-                width: calc(100% / 12 * 8);
+                // width: calc(100% / 12 * 6);
             }
             @include max-media($bk-d-768){
                 width: 100%;
@@ -256,11 +263,11 @@
         font-weight: normal;
         text-transform: none;
 
-        &:hover {
-            color: $w-cl;
-            background-color: $main-cl;
-            letter-spacing: 2px;
-        }
+        // &:hover {
+        //     color: $w-cl;
+        //     background-color: $main-cl;
+        //     letter-spacing: 2px;
+        // }
     }
 
     .desc {
@@ -348,7 +355,6 @@
     }
 
     .img {
-        box-shadow: 10px 10px 30px rgba($color: $b-cl, $alpha: .25);
         border-radius: 20px;
         overflow: hidden;
 

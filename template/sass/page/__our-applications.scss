@@ -1,12 +1,28 @@
 .applications{
     overflow: hidden;
+    .columns{
+        margin: -15px -50px;
+        @include max-media($bk-d-1440){
+            margin: -15px -40px;
+        }
+        @include max-media($bk-576){
+            margin: -10px;
+        }
+    }
     .column{
         width: calc(100% / 3);
+        padding: 15px 50px;
+
+        @include max-media($bk-d-1440){
+            padding: 15px 40px;
+        }
+
         @include max-media($bk-d-1200){
             width: calc(100% / 2);
         }
         @include max-media($bk-576){
             width: 100%;
+            padding: 10px;
         }
     }
 
@@ -21,11 +37,23 @@
     }
 
     .head-center{
-        max-width: 1076px;
+        // max-width: 1076px;
         margin: 0 auto 40px;
-        border-bottom: 1px solid $b-cl;
+        // border-bottom: 1px solid $b-cl;
         padding-bottom: 10px;
         text-align: center;
+        position: relative;
+        &::after{
+            content: '';
+            width: calc(100% / 12 * 8);
+            height: 1px;
+            position: absolute;
+            bottom: 0;
+            left:50%;
+            transform: translateX(-50%);
+            background-color: $b-cl;
+            
+        }
         @include max-media($bk-d-1200){
             margin-bottom: 30px;
         }
@@ -73,7 +101,6 @@
     .img{
         display: block;
         border-radius: 20px;
-        box-shadow: 10px 10px 30px rgba($color: $b-cl, $alpha: .25);
         overflow: hidden;
         img{
             border-radius: 20px;
@@ -100,6 +127,7 @@
     .desc{
         @include line-clamp(3);
         line-height: 1.5;
+        font-style: normal;
     }
 
  

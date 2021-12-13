@@ -45,11 +45,11 @@
 
     .content{
         padding: 30px;
-        box-shadow: 10px 10px 30px rgba($color: $b-cl, $alpha: .25);
         border-radius: 30px;
         min-height: 222px;
         display: flex;
         flex-direction: column;
+        background-color: $w-cl;
         @include max-media($bk-d-1200){
             padding: 20px;
             min-height: 180px;

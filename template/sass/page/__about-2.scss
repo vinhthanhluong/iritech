@@ -55,8 +55,11 @@
     }
 
     .column{
-        width: calc(100% / 4);
+        width: calc(100% / 5);
         @include max-media($bk-d-992){
+            width: calc(100% / 4);
+        }
+        @include max-media($bk-d-768){
             width: calc(100% / 3);
         }
         @include max-media($bk-576){
@@ -75,20 +78,25 @@
         }
 
         .clp-img{
-            padding: 24px 30px;
+            padding: 20px 30px;
             display: block;
             @include max-media($bk-d-1200){
-                padding: 20px 30px;
+                padding: 15px 20px;
             }
-            @include max-media($bk-d-992){
-                padding: 16px 30px;
+            @include max-media($bk-d-768){
+
             }
             @include max-media($bk-576){
-                padding: 12px 30px;
+                padding: 12px 20px;
             }
             img{
                 margin: 0 auto;
                 object-fit: cover;
+                background-color: transparent;
+                max-width: 80%;
+                @include max-media($bk-1440){
+                    // max-width: 90%;
+                }
             }
         }
     }

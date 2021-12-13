@@ -102,8 +102,14 @@
 
         .mona-content{
             columns: 2;
-            column-gap: 30px;
+            column-gap: 140px;
             line-height: 1.5;
+            @include max-media($bk-d-1440){
+                column-gap: 100px;
+            }
+            @include max-media($bk-d-992){
+                column-gap: 60px;
+            }
             @include max-media($bk-576){
                 columns: 1;
             }

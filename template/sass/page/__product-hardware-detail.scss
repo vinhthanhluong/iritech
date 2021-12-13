@@ -216,7 +216,7 @@
 .specifications {
     overflow: hidden;
 
-    &.bg-cl{
+    &.bg-cl {
         background-color: #E5E5E5;
 
     }
@@ -311,8 +311,20 @@
         }
 
         li {
-            list-style-type: disc;
-            list-style-position: inside;
+            // list-style-type: disc;
+            // list-style-position: inside;
+            position: relative;
+            padding-left: 20px;
+            &::before{
+                content: '';
+                width: 4px;
+                height: 4px;
+                border-radius: 100%;
+                background-color: $b-cl;
+                position: absolute;
+                top: 6px;
+                left: 0;
+            }
 
             &:not(:first-child) {
                 margin-top: 15px;
@@ -401,64 +413,88 @@
             height: 41px;
             border-radius: 100px;
             border-color: $b-cl;
-            padding: 11px 0 9px;
+            padding: 11px 15px 9px;
             // @include flex-mid;
             text-align: center;
             cursor: pointer;
-            box-shadow: 10px 10px 30px rgba($color: $b-cl, $alpha: .25);
             background-image: url('../img/svg/icon-down.svg');
             background-position: right 15px center;
             background-repeat: no-repeat;
+
         }
     }
 
-    .container-full {
-        @include min-media($bk-1600) {
-            padding: 0;
-        }
-    }
+
 
 
 
     .download-wrapper {
+        // border-radius: 20px;
+        // padding: 37px 70px 30px;
+        margin: 42px auto 0;
+        width: 100%;
+        // max-width: 1678px;
+
+        @include max-media($bk-d-1600) {
+            margin: 30px auto 0;
+            // padding: 37px 0 30px;
+        }
+
+        // @include max-media($bk-d-1440) {
+        //      padding: 30px 0;
+        // }
+
+        // @include max-media($bk-d-1200) {
+        //     padding: 30px 15px;
+        // }
+
+        // @include max-media($bk-d-1024) {
+        //     padding: 20px 5px;
+        // }
+
+
+        // @include max-media($bk-d-768) {
+        //     padding: 0;
+        //     border-radius: 0;
+        // }
+
+        .container {
+            
+
+           
+        }
+    }
+
+    .down-wrap {
         background-color: $w-cl;
         border-radius: 20px;
         padding: 37px 70px 30px;
         margin: 42px auto 0;
         width: 100%;
-        max-width: 1678px;
-
 
         @include max-media($bk-d-1600) {
             margin: 30px auto 0;
-            padding: 37px 0 30px;
+            padding: 37px 30px 30px;
         }
 
         @include max-media($bk-d-1440) {
-            padding: 30px 0;
+            padding: 30px;
         }
-        @include max-media($bk-d-1200){
-            padding: 30px 15px;
+
+        @include max-media($bk-d-1200) {
+            padding: 30px 20px;
         }
+
         @include max-media($bk-d-1024) {
-            padding: 20px 5px;
+            padding: 20px  15px;
         }
-       
+
 
         @include max-media($bk-d-768) {
             padding: 0;
             border-radius: 0;
         }
 
-        .container {
-            @include min-media($bk-1200){
-                padding: 0;
-            }
-            @include max-media($bk-d-768){
-                padding: 0;
-            }
-            // width: 100%;
-        }
     }
 
     .download-table {
@@ -468,7 +504,7 @@
             display: block;
             height: 480px;
             overflow-y: auto;
-            @include custom-vertical-scrollbar(2px ,$g-cl)
+            @include custom-vertical-scrollbar(2px, $g-cl)
         }
 
         thead,
@@ -489,15 +525,15 @@
             }
 
             th {
-                text-align: left;
+                text-align: center;
                 @include fz-18;
 
                 &:nth-child(1) {
-                    width: calc(100% / 12 * 3);
+                    width: calc(100% / 12 * 2);
                 }
 
                 &:nth-child(2) {
-                    width: calc(100% / 12 * 5);
+                    width: calc(100% / 12 * 6);
                 }
 
                 &:nth-child(3) {
@@ -552,6 +588,14 @@
                             text-align: left;
                         }
                     }
+
+
+                    &:nth-child(3){
+                        text-align: center;
+                        @include max-media($bk-d-768){
+                            text-align: left
+                        }
+                    }
                 }
             }
 
@@ -564,6 +608,10 @@
                     @include max-media($bk-d-768) {
                         display: none;
                     }
+                }
+
+                &:last-child{
+                    opacity: .6;
                 }
 
                 @include max-media($bk-d-1440) {

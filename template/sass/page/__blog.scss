@@ -69,10 +69,6 @@
         @include max-media($bk-d-992){
             padding: 8px 22px;
         }
-        &:hover {
-            background-color: $main-cl;
-            letter-spacing: 2px;
-        }
     }
 
     .img {
@@ -195,8 +191,15 @@
 
 
         .bx-tt {
-            max-width: 230px;
+            // max-width: 230px;
             margin-bottom: 10px;
+            font-size: 28px;
+            @include max-media($bk-1440){
+                font-size: 25px;
+            }
+            @include max-media($bk-d-1200){
+                font-size: 22px;
+            }
         }
 
         .bx-desc {
@@ -268,6 +271,7 @@
 
         .blog-desc {
             line-height: 1.5;
+            font-style: normal;
         }
     }
 

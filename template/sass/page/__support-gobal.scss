@@ -2,14 +2,14 @@
     overflow: hidden;
 
     .container-full {
-
         @include min-media($bk-1600) {
             padding: 0;
         }
     }
 
     // //header support
-    .head-wrapper {
+
+    .head-wrap {
         position: relative;
 
         &::before {
@@ -22,53 +22,6 @@
             left: 0;
             transform: translate(-50%, -50%);
         }
-    }
-
-    .head-wrap {
-        background-color: $w-cl;
-        border-radius: 20px;
-        max-width: 1680px;
-        margin: 0 auto;
-        box-shadow: 10px 10px 30px rgba($color: $b-cl, $alpha: .25);
-        z-index: 1;
-        position: relative;
-        padding: 80px 0;
-        @include max-media($bk-d-1200){
-            padding: 60px 15px;
-        }
-        @include max-media($bk-d-992){
-            padding: 40px 15px;
-        }
-
-        @include max-media($bk-576) {
-            padding: 20px 5px;
-        }
-
-        &::before {
-            content: '';
-            width: 10px;
-            height: 10px;
-            border: 1px solid $main-cl;
-            border-radius: 100%;
-            position: absolute;
-            top: 50%;
-            left: 30px;
-            transform: translateY(-50%);
-            left: 1.7%;
-            @include max-media(1680px) {
-                // display: none;
-                left: 10px;
-            }
-            @include max-media($bk-d-1570){
-                left: 25px;
-            }
-            @include max-media($bk-d-1200){
-                left: 10px;
-            }
-            @include max-media($bk-576){
-                left: 4px;
-            }
-        }
 
         .columns {
             justify-content: space-between;
@@ -77,10 +30,12 @@
         .column {
             &.tx {
                 width: calc(100% /12 * 4);
-                @include max-media($bk-d-1200){
+
+                @include max-media($bk-d-1200) {
                     width: calc(100% / 12 * 5);
                 }
-                @include max-media($bk-d-768){
+
+                @include max-media($bk-d-768) {
                     width: calc(100% / 12 * 6);
                 }
 
@@ -94,6 +49,72 @@
 
                 @include max-media($bk-576) {
                     width: 100%;
+                }
+            }
+        }
+
+        .head {
+            background-color: $w-cl;
+            border-radius: 20px;
+            box-shadow: 10px 10px 30px rgba($color: $b-cl, $alpha: .25);
+            z-index: 1;
+            position: relative;
+            padding: 60px;
+            @include max-media($bk-d-1570){
+                padding: 60px 50px;
+            }
+
+            @include max-media($bk-d-1440) {
+                padding: 50px 40px;
+            }
+
+            @include max-media($bk-d-1200) {
+                padding: 40px 30px;
+            }
+
+            @include max-media($bk-d-992) {
+                padding: 30px;
+            }
+            @include max-media($bk-d-768){
+                padding: 30px 25px;
+            }
+
+            @include max-media($bk-576) {
+                padding: 20px 21px;
+            }
+
+            &::before {
+                content: '';
+                width: 10px;
+                height: 10px;
+                border: 1px solid $main-cl;
+                border-radius: 100%;
+                position: absolute;
+                top: 50%;
+                left: 30px;
+                transform: translateY(-50%);
+                left: 1.7%;
+
+
+                @include max-media($bk-d-1570) {
+                    left: 20px;
+                }
+
+                @include max-media($bk-d-1440){
+                    left: 15px;
+                }
+
+                @include max-media($bk-d-1200) {
+                    left: 10px;
+                }
+                @include max-media($bk-d-768){
+                    width: 7px;
+                    height: 7px;
+                    left: 9px;
+                }
+
+                @include max-media($bk-576) {
+                    left: 7px;
                 }
             }
         }
@@ -277,9 +298,10 @@
         @include max-media($bk-d-1024) {
             margin: -5px 0;
         }
-        @include max-media($bk-576){
+
+        @include max-media($bk-576) {
             border: 1px solid $b-cl;
-            margin: 0 ;
+            margin: 0;
             padding: 5px;
         }
     }
@@ -290,7 +312,7 @@
         display: none;
         width: 100%;
         background-color: $b-cl;
-        color:$w-cl;
+        color: $w-cl;
         padding: 10px;
 
         @include max-media($bk-576) {
@@ -324,7 +346,8 @@
             @include max-media($bk-d-1200) {
                 padding: 7px 20px;
             }
-            @include max-media($bk-576){
+
+            @include max-media($bk-576) {
                 padding: 5px 20px;
             }
         }
@@ -346,6 +369,21 @@
         flex-wrap: wrap;
         margin: -7.5px;
 
+        &.sp-choose-all{
+            justify-content: center;
+
+            .sp-select{
+                width: 50%;
+                @include max-media($bk-d-576){
+                    width: 70%;
+                }
+            }
+
+            .f-control{
+                width: 100%;
+                text-align: left;
+            }
+        }
     }
 
     .sp-select {
@@ -357,7 +395,8 @@
         @include max-media($bk-d-992) {
             width: 100%;
         }
-        @include max-media($bk-576){
+
+        @include max-media($bk-576) {
             justify-content: space-between;
         }
     }
@@ -370,8 +409,8 @@
         border-radius: 100px;
         border-color: $b-cl;
         width: 290px;
-        height: 54px;
-        padding: 15px 0;
+        height: 44px;
+        padding: 12px 20px;
         text-align: center;
         background-image: url('../img/svg/icon-right-b-1.svg');
         background-position: right 20px center;
@@ -382,9 +421,11 @@
         @include max-media($bk-d-1200) {
             width: 240px;
             height: 44px;
-            padding: 12px 0;
+            background-position: right 15px center;
+            padding: 12px 15px;
         }
-        @include max-media($bk-576){
+
+        @include max-media($bk-576) {
             width: 200px;
         }
     }
@@ -407,7 +448,8 @@
         flex-wrap: wrap;
         align-items: center;
         padding: 21px 0;
-        @include max-media($bk-d-768){
+
+        @include max-media($bk-d-768) {
             padding: 15px 0;
         }
 
@@ -427,7 +469,8 @@
         @include max-media($bk-d-992) {
             width: calc(100% - 220px - 210px);
         }
-        @include max-media($bk-d-768){
+
+        @include max-media($bk-d-768) {
             width: 100%;
             padding: 5px 0;
         }
@@ -442,9 +485,10 @@
             @include max-media($bk-d-992) {
                 width: 110px;
             }
-            @include max-media($bk-d-768){
+
+            @include max-media($bk-d-768) {
                 width: 50%;
-                order:1;
+                order: 1;
             }
         }
 
@@ -454,7 +498,8 @@
             // width: 225px;
             max-width: 225px;
             width: auto;
-            @include max-media($bk-d-768){
+
+            @include max-media($bk-d-768) {
                 width: 100%;
                 order: 2;
                 margin-left: 0;
@@ -483,35 +528,49 @@
         }
     }
 
-
-
-
-
     ////footer support
     .foo-wrapper {
-        position: relative;
     }
 
     .foo-wrap {
-        background-color: $b-cl;
-        color: $w-cl;
-        max-width: 1680px;
-        border-radius: 20px;
-        margin: 0 auto;
-        box-shadow: 10px 10px 30px rgba($color: $b-cl, $alpha: .25);
-
-        @include max-media($bk-576) {
-            padding: 20px 0;
-        }
+       
     }
 
     .foo {
+        background-color: $b-cl;
+        color: $w-cl;
+        border-radius: 20px;
+        box-shadow: 10px 10px 30px rgba($color: $b-cl, $alpha: .25);
+        position: relative;
+        padding: 60px;
+
         display: flex;
         align-items: center;
         justify-content: space-between;
 
+        @include max-media($bk-d-1570){
+            padding: 50px;
+        }
+
+        @include max-media($bk-d-1440) {
+            padding: 40px;
+        }
+
+        @include max-media($bk-d-1200) {
+            padding: 40px 30px;
+        }
+
+        @include max-media($bk-d-992) {
+            padding: 30px;
+        }
+        @include max-media($bk-d-768){
+            padding: 30px 20px;
+        }
+
         @include max-media($bk-576) {
+            padding: 20px;
             flex-direction: column;
+
         }
 
         .btn-contact {
@@ -532,6 +591,7 @@
         }
 
         .foo-title {
+            @include fz-30;
             @include max-media($bk-576) {
                 padding-bottom: 15px;
                 text-align: center;
