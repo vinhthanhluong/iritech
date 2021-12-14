@@ -276,24 +276,27 @@
         background-color: $w-cl;
         padding: 10px 30px;
         display: inline-flex;
+        align-items: center;
         font-weight: normal;
         text-transform: none;
         box-shadow: 10px 10px 30px rgba($color: $b-cl, $alpha: .25);
-
+        
         &:hover {
-            color: $w-cl;
-            background-color: $main-cl;
-            letter-spacing: 1px;
+            // color: $w-cl;
+            // background-color: $main-cl;
+            // letter-spacing: 1px;
 
-            img {
-                filter: brightness(0) invert(1);
-            }
+            // img {
+            //     filter: brightness(0) invert(1);
+            // }
         }
 
         img {
             margin-right: 10px;
             width: 15px;
             height: 15px;
+            // background-color: $main-cl;
+            color: $main-cl;
         }
     }
 

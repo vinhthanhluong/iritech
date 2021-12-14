@@ -1,5 +1,6 @@
 .blogs {
     overflow: hidden;
+
     .container-full {
         padding: 0;
     }
@@ -7,12 +8,12 @@
     .head {
         text-align: center;
         margin-bottom: 30px;
-      
-        @include max-media($bk-d-1200){
+
+        @include max-media($bk-d-1200) {
             margin-bottom: 20px;
         }
 
-        .title{
+        .title {
             display: flex;
             align-items: center;
             justify-content: center;
@@ -30,27 +31,55 @@
     .column {
         &.txt {
             width: calc(100% / 12 * 4);
-            @include max-media($bk-d-992){
+
+            @include max-media($bk-d-992) {
                 width: 100%;
             }
         }
 
         &.ig {
             width: calc(100% / 12 * 8);
-            @include max-media($bk-d-992){
+
+            @include max-media($bk-d-992) {
                 width: 100%;
             }
+        }
+    }
+    .blog-inner{
+        padding-left: 80px;
+        @include max-media($bk-d-1900) {
+            padding-left: 50px;
+        }
+
+        @include max-media($bk-d-1440) {
+            padding-left: 40px;
+        }
+
+        @include max-media($bk-d-1200) {
+            padding-left: 30px;
+        }
+
+        @include max-media($bk-d-992) {
+            padding-left: 0px;
         }
     }
 
     .blog-tt {
         max-width: 311px;
         margin-bottom: 10px;
-        @include max-media($bk-d-1200){
+        font-size: 36px;
+        @include max-media($bk-d-1200) {
             margin-bottom: 5px;
+            font-size: 32px;
         }
-        @include max-media($bk-d-992){
+
+        @include max-media($bk-d-992) {
             max-width: 100%;
+            font-size: 30px;
+        }
+    
+        @include max-media($bk-768) {
+            font-size: 28px;
         }
     }
 
@@ -59,8 +88,13 @@
         margin-bottom: 20px;
         @include line-clamp(3);
         max-width: 320px;
-        @include max-media($bk-d-1200){
+
+        @include max-media($bk-d-1200) {
             margin-bottom: 15px;
+            max-width: 280px;
+        }
+        @include max-media($bk-d-992){
+            max-width: 100%;
         }
     }
 
@@ -75,7 +109,8 @@
         padding: 10px 40px;
         box-shadow: 10px 10px 30px rgba($color: $b-cl, $alpha: .25);
         @include fz-16;
-        @include max-media($bk-d-992){
+
+        @include max-media($bk-d-992) {
             padding: 8px 22px;
         }
     }
@@ -95,27 +130,66 @@
         display: flex;
         flex-wrap: wrap;
         align-items: center;
-        margin: -5px;
+        justify-content: space-between;
+        margin: -15px;
+        padding-left: 80px;
+
+        @include max-media($bk-d-1900) {
+            padding-left: 50px;
+        }
+
+        @include max-media($bk-d-1440) {
+            padding-left: 40px;
+        }
+
+        @include max-media($bk-d-1200) {
+            padding-left: 30px;
+        }
+
+        @include max-media($bk-d-992) {
+            padding-left: 0px;
+            margin: -7.5px;
+        }
+        @include max-media($bk-d-768) {
+            margin: -5px;
+        }
+
         .tab-tt {
-            width: calc(100% / 3);
-            font-size: 36px;
+            width: calc(100% / 12 * 4);
+            font-size: 32px;
             font-weight: 600;
             text-transform: capitalize;
             opacity: .4;
             transition: all .3s ease;
             cursor: pointer;
-            padding: 5px;
+            padding: 15px;
+
             @include max-media($bk-d-1440) {
-                font-size: 30px;
-            }
-            @include max-media($bk-d-1200) {
                 font-size: 26px;
             }
+
+            @include max-media($bk-d-1200) {
+                font-size: 24px;
+            }
+
             @include max-media($bk-d-992) {
                 font-size: 22px;
+                padding: 7.5px;
+                width: calc(100% / 12 * 3.5);
             }
+
             @include max-media($bk-d-768) {
                 width: 100%;
+                padding: 5px;
+            }
+
+            &:nth-child(1) {
+               @include max-media($bk-d-992){
+                    width: calc(100% / 12 * 5);
+               }
+               @include max-media($bk-d-768){
+                   width: 100%;
+               }
             }
 
             &.active {
@@ -130,7 +204,8 @@
 
     .blog-content {
         margin-top: 30px;
-        @include max-media($bk-1024){
+
+        @include max-media($bk-1024) {
             margin-top: 20px;
         }
 
@@ -147,34 +222,42 @@
     .cols {
         display: flex;
         flex-wrap: wrap;
+        justify-content: space-between;
         margin: -15px;
-        @include max-media($bk-d-1200){
+
+        @include max-media($bk-d-1200) {
             margin: -7.5px;
         }
     }
 
     .col {
         padding: 15px;
-        @include max-media($bk-d-1200){
+
+        @include max-media($bk-d-1200) {
             padding: 7.5px;
         }
 
         &.tx {
+            // width: calc(100% / 12 * 4);
             width: calc(100% / 12 * 4);
-            @include max-media($bk-d-992){
+
+            @include max-media($bk-d-992) {
                 width: calc(100% / 12 * 5);
             }
-            @include max-media($bk-d-768){
+
+            @include max-media($bk-d-768) {
                 width: 100%;
             }
         }
 
         &.txt {
             width: calc(100% /12 * 8);
-            @include max-media($bk-d-992){
+
+            @include max-media($bk-d-992) {
                 width: calc(100% / 12 * 7);
             }
-            @include max-media($bk-d-768){
+
+            @include max-media($bk-d-768) {
                 width: 100%;
             }
         }
@@ -183,18 +266,22 @@
     .blog-bx {
         background-color: $b-cl;
         color: $w-cl;
-        padding: 85px 80px;
+        padding: 80px 80px;
         border-radius: 20px;
-        @include max-media($bk-d-1900){
+
+        @include max-media($bk-d-1900) {
             padding: 50px;
         }
-        @include max-media($bk-d-1440){
+
+        @include max-media($bk-d-1440) {
             padding: 40px;
         }
-        @include max-media($bk-d-1200){
+
+        @include max-media($bk-d-1200) {
             padding: 30px;
         }
-        @include max-media($bk-d-992){
+
+        @include max-media($bk-d-992) {
             padding: 20px;
         }
 
@@ -203,11 +290,16 @@
             // max-width: 230px;
             margin-bottom: 10px;
             font-size: 28px;
-            @include max-media($bk-1440){
-                font-size: 25px;
+
+            @include max-media($bk-1440) {
+                font-size: 24px;
             }
-            @include max-media($bk-d-1200){
+
+            @include max-media($bk-d-1200) {
                 font-size: 22px;
+            }
+            @include max-media($bk-d-992){
+                font-size: 20px;
             }
         }
 
@@ -215,7 +307,8 @@
             line-height: 1.5;
             margin-bottom: 20px;
             @include line-clamp(4);
-            @include max-media($bk-d-992){
+
+            @include max-media($bk-d-992) {
                 margin-bottom: 15px;
             }
         }
@@ -223,7 +316,7 @@
         .view-more {
             background-color: $w-cl;
             color: $b-cl;
-            
+
 
             &:hover {
                 background-color: $main-cl;
@@ -234,6 +327,22 @@
 
     .blog-txt {
         overflow: hidden;
+        padding-left: 55px;
+
+        @include max-media($bk-d-1900) {
+            padding-left: 35px;
+        }
+
+        @include max-media($bk-d-1440) {
+            padding-left: 27px;
+        }
+
+        @include max-media($bk-d-1200) {
+            padding-left: 25px;
+        }
+        @include max-media($bk-d-992) {
+            padding-left: 0px;
+        }
     }
 
     .blog-item {
@@ -241,13 +350,18 @@
         position: relative;
 
         &:not(:last-child) {
-            padding-bottom: 10px;
-            margin-bottom: 30px;
-            @include max-media($bk-d-1200){
-                margin-bottom: 20px;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+
+            @include max-media($bk-d-1200) {
+                // margin-bottom: 20px;
+                margin-bottom: 15px;
+                padding-bottom: 15px;
             }
-            @include max-media($bk-d-992){
+
+            @include max-media($bk-d-992) {
                 margin-bottom: 10px;
+                padding-bottom: 10px;
             }
 
             &::after {
