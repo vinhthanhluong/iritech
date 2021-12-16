@@ -172,6 +172,7 @@ html {
   font-family: "Poppins", sans-serif;
   font-display: swap;
   line-height: 1.4;
+  transition: all 0.3s ease;
 }
 body::-webkit-scrollbar,
 html::-webkit-scrollbar {
@@ -179,11 +180,24 @@ html::-webkit-scrollbar {
 }
 body::-webkit-scrollbar-thumb,
 html::-webkit-scrollbar-thumb {
-  background: #000000;
+  background: transparent;
   border-radius: 990px;
+  transition: all 0.3s ease;
 }
 body::-webkit-scrollbar-track,
 html::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+body.active::-webkit-scrollbar {
+  width: 10px;
+}
+body.active::-webkit-scrollbar-thumb {
+  background: #000000;
+  border-radius: 990px;
+  transition: all 0.3s ease;
+}
+body.active::-webkit-scrollbar-track {
   background: transparent;
 }
 
@@ -1008,6 +1022,7 @@ sup {
   .header-list::-webkit-scrollbar-thumb {
     background: #AC0000;
     border-radius: 990px;
+    transition: all 0.3s ease;
   }
   .header-list::-webkit-scrollbar-track {
     background: transparent;
@@ -2640,6 +2655,7 @@ sup {
   align-items: center;
   justify-content: center;
   transition: 1s ease;
+  display: none;
 }
 #page-loading img {
   animation: waveLoading 3s ease-out infinite backwards;
@@ -2858,6 +2874,7 @@ html .mfp-wrap {
 .mfp-container::-webkit-scrollbar-thumb {
   background: #AC0000;
   border-radius: 990px;
+  transition: all 0.3s ease;
 }
 .mfp-container::-webkit-scrollbar-track {
   background: transparent;
@@ -3536,31 +3553,28 @@ html .mfp-wrap {
 }
 .portfolio .tab-con.active {
   display: block;
-  animation: OutIn 1s;
+  animation: showTab 1s;
 }
 .portfolio .port-box {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  margin: -7.5px;
 }
 .portfolio .col {
   width: 50%;
+  padding: 7.5px;
 }
 @media screen and (max-width: 767px) {
   .portfolio .col {
     width: 100%;
   }
 }
-@media screen and (max-width: 576px) {
-  .portfolio .content {
-    padding-top: 20px;
-  }
-}
 .portfolio .img img {
-  width: auto;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   margin: 0 auto;
+  max-width: 100%;
 }
 .portfolio .title {
   margin-bottom: 8px;
@@ -3689,9 +3703,6 @@ html .mfp-wrap {
 }
 .news-event .desc {
   line-height: 1.5;
-}
-.news-event .news-inner:hover .img img {
-  transform: scale(1.1);
 }
 .news-event .news-inner:hover .tt {
   color: #AC0000;
@@ -4678,6 +4689,9 @@ html .mfp-wrap {
 .technology .arrow {
   margin-left: 15px;
 }
+.technology .content {
+  color: #fff;
+}
 .technology .content p {
   line-height: 1.5;
 }
@@ -4863,7 +4877,6 @@ html .mfp-wrap {
   }
 }
 .client-partners .clp-box {
-  border: 1px solid rgba(0, 0, 0, 0.3);
   border-radius: 20px;
   transition: all 0.3s ease;
 }
@@ -4964,6 +4977,24 @@ html .mfp-wrap {
 @media screen and (max-width: 1199px) {
   .global-business .txt-wrapper .img {
     position: static;
+    margin-left: auto;
+    width: 400px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .global-business .txt-wrapper .img {
+    width: 300px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .global-business .txt-wrapper .img {
+    margin: 0 auto;
+    width: 400px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .global-business .txt-wrapper .img {
+    width: 300px;
   }
 }
 .global-business .box-wrap {
@@ -5909,14 +5940,26 @@ html .mfp-wrap {
   z-index: 1;
   position: relative;
   background-color: #f2f2f2;
+  max-width: 425px;
+}
+@media screen and (max-width: 991px) {
+  .blog-detail .blog-title .title {
+    max-width: 360px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .blog-detail .blog-title .title {
+    max-width: 330px;
+  }
 }
 @media screen and (max-width: 767px) {
   .blog-detail .blog-title .title {
     width: 100%;
+    max-width: 100%;
   }
-  .blog-detail .blog-title .title br {
-    display: none;
-  }
+}
+.blog-detail .blog-title .title br {
+  display: none;
 }
 .blog-detail .blog-title .date {
   margin-left: auto;
@@ -6038,6 +6081,11 @@ html .mfp-wrap {
   left: 50%;
   transform: translateX(-50%);
   background-color: #000000;
+}
+@media screen and (max-width: 576px) {
+  .applications .head-center::after {
+    width: calc(100% /12 * 10);
+  }
 }
 @media screen and (max-width: 1199px) {
   .applications .head-center {
@@ -6457,10 +6505,6 @@ html .mfp-wrap {
   background-color: #fff;
   color: #000000;
 }
-.blogs .blog-bx .view-more:hover {
-  background-color: #AC0000;
-  color: #fff;
-}
 .blogs .blog-txt {
   overflow: hidden;
   padding-left: 55px;
@@ -6508,7 +6552,7 @@ html .mfp-wrap {
 .blogs .blog-item:not(:last-child)::after {
   content: "";
   width: 100vw;
-  height: 1px;
+  height: 0.5px;
   background-color: #000000;
   position: absolute;
   bottom: 0;

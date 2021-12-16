@@ -55,7 +55,17 @@ html {
     font-display: swap;
     line-height: $lh-body;
     // color: $cl-body;
-    @include custom-scrollbar(10px, $b-cl );
+    @include custom-scrollbar(10px, transparent );
+    transition: all .3s ease
+}
+
+body{
+    &.active{
+        @include custom-scrollbar(10px, $b-cl );
+        
+
+
+    }
 }
 
 a {

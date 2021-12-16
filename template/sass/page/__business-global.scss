@@ -63,7 +63,22 @@
             right: 0;
             @include max-media($bk-d-1200){
                 position: static;
+                margin-left: auto;
+                width: 400px;
             }
+            @include max-media($bk-d-992){
+                width: 300px;
+            }
+            @include max-media($bk-d-768){
+                margin: 0 auto;
+                width: 400px;
+            }
+            @include max-media($bk-576){
+                width: 300px;
+            }
+
+
+
         }
     }
 

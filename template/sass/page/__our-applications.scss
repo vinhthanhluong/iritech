@@ -52,6 +52,9 @@
             left:50%;
             transform: translateX(-50%);
             background-color: $b-cl;
+            @include max-media($bk-576){
+                width: calc(100% /12 * 10);
+            }
             
         }
         @include max-media($bk-d-1200){

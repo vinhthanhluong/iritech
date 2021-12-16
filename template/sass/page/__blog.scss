@@ -318,10 +318,10 @@
             color: $b-cl;
 
 
-            &:hover {
-                background-color: $main-cl;
-                color: $w-cl;
-            }
+            // &:hover {
+            //     background-color: $main-cl;
+            //     color: $w-cl;
+            // }
         }
     }
 
@@ -367,7 +367,7 @@
             &::after {
                 content: '';
                 width: 100vw;
-                height: 1px;
+                height: 0.5px;
                 background-color: $b-cl;
                 position: absolute;
                 bottom: 0;

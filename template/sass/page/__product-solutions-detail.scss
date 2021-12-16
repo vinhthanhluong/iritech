@@ -38,11 +38,19 @@
             z-index: 1;
             position: relative;
             background-color: $g-F2F2-cl;
+            max-width: 425px;
+            @include max-media($bk-d-992){
+                max-width: 360px;
+            }
+            @include max-media($bk-768){
+                max-width: 330px;
+            }
             @include max-media($bk-d-768){
                 width: 100%;
-                br{
-                    display: none;
-                }
+               max-width: 100%;
+            }
+            br{
+                display: none;
             }
         }
 
